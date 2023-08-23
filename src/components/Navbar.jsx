@@ -11,6 +11,8 @@ import {
   MenuList,
   MenuItem,
   Heading,
+  Tooltip,
+  Text,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +33,7 @@ const Navbar = () => {
       top={0}
       px={6}
     >
-      <Flex p={4} align="center" justifyContent={"space-between"}>
+      <Flex p={4} align="center" justifyContent="space-between">
         <HStack spacing={4} align="center">
           <Menu>
             <MenuButton
@@ -41,20 +43,70 @@ const Navbar = () => {
               color={colorMode === "light" ? "gray.600" : "white"}
               display={{ base: "block", md: "none" }}
             />
-            <MenuList zIndex={20}>
-              <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
-              <MenuItem onClick={() => navigate("/about")}>About</MenuItem>
-              <MenuItem onClick={() => navigate("/experience")}>
+            <MenuList
+              zIndex={20}
+              bg={colorMode === "light" ? "white" : "gray.800"}
+            >
+              <MenuItem
+                onClick={() => navigate("/")}
+                _hover={ { color: "brand.500"}}
+              >
+                Home
+              </MenuItem>
+              <MenuItem
+                onClick={() => navigate("/about")}
+                _hover={{ bg: "brand.100" }}
+              >
+                About
+              </MenuItem>
+              <MenuItem
+                onClick={() => navigate("/experience")}
+                _hover={{ bg: "brand.100" }}
+              >
                 Experience
               </MenuItem>
-              <MenuItem onClick={() => navigate("/certificates")}>
+              <MenuItem
+                onClick={() => navigate("/certificates")}
+                _hover={{ bg: "brand.100" }}
+              >
                 Certificates & Awards
               </MenuItem>
-              <MenuItem>
-                
-              </MenuItem>
+
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  icon={
+                    <Text color={"black"} fontWeight={"normal"}>
+                      WebGIS
+                    </Text>
+                  }
+                  _hover={{ bg: "brand.100" }}
+                  w={"100%"}
+                  colorScheme="none"
+                  borderRadius={"none"}
+                ></MenuButton>
+                <MenuList
+                  bg={colorMode === "light" ? "white" : "gray.800"}
+                  border="1px solid"
+                  borderColor={colorMode === "light" ? "gray.200" : "gray.600"}
+                >
+                  <MenuItem
+                    onClick={() => navigate("/webgis")}
+                    _hover={{ bg: "brand.500" }}
+                  >
+                    WebGIS-1
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => navigate("/webgis-2")}
+                    _hover={{ bg: "brand.500" }}
+                  >
+                    WebGIS-2
+                  </MenuItem>
+                </MenuList>
+              </Menu>
             </MenuList>
           </Menu>
+
           <Image
             src="LOGO GFR.png"
             alt="Logo GFR"
@@ -72,12 +124,19 @@ const Navbar = () => {
               navigate("/");
             }}
             cursor="pointer"
-            _hover={{ color: "brand.600", transform: "scale(1.1)" }}
+            _hover={{  transform: "scale(1.1)" }}
           >
             Felix's Portfolio
           </Heading>
         </HStack>
-        <HStack spacing={4} display={{ base: "none", md: "flex" }}>
+        {/* <Box display={{ base: "none", md: "flex" }}>
+          
+        </Box> */}
+        <Box display={{ base: "none", md: "flex" }} w={{ base: "100vw", md: "auto"}} ml={{ base: "0", md: "auto"}}>
+          
+        </Box>
+        
+        <HStack  mr={10} spacing={4} display={{ base: "none", md: "flex" }}>
           <Box
             onClick={() => navigate("/")}
             cursor="pointer"
@@ -114,14 +173,13 @@ const Navbar = () => {
           <Box>
             <NavbarWebGIS />
           </Box>
-
-          <IconButton
-            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            aria-label="Toggle Color Mode"
-            onClick={toggleColorMode}
-            color={colorMode === "light" ? "gray.600" : "white"}
-          />
         </HStack>
+        <IconButton
+          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          aria-label="Toggle Color Mode"
+          onClick={toggleColorMode}
+          color={colorMode === "light" ? "gray.600" : "white"}
+        />
       </Flex>
     </Box>
   );

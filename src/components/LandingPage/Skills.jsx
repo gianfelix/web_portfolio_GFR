@@ -20,18 +20,18 @@ export const Skills = () => {
     { icon: FaDesktop, title: 'GIS & Spatial Analysis', description: 'ArcGIS, QGIS, PostGIS' },
     // Add more skills as needed
   ];
-
+  
   return (
     <Box
       p={6}
-      bgGradient={isDarkMode ? 'linear(to-r, gray.700, blue.900)' : 'linear(to-r, gray.100, blue.200)'}
-      borderRadius="lg"
+      bg={isDarkMode ? 'gray.800' : 'white'}
+      // borderRadius="lg"
     >
-      <Heading fontSize="xl" mb={4} textAlign="center" fontWeight="bold">
+      <Heading fontSize="2xl" mb={5} textAlign="center" fontWeight="bold">
       <Text
           fontSize={{ base: '2xl', md: '3xl' }}
           fontWeight="bold"
-          color={isDarkMode ? 'blue.200' : 'blue.800'}
+          color={isDarkMode ? "white" : 'black'}
           letterSpacing="wide"
           textTransform="uppercase"
           
@@ -44,7 +44,7 @@ export const Skills = () => {
           <Flex
             key={index}
             p={4}
-            bg={isDarkMode ? 'gray.700' : 'white'}
+            bg={isDarkMode ? 'blue.700' : 'blue.100'}
             borderRadius="lg"
             boxShadow="md"
             flexDirection="column"
@@ -52,7 +52,7 @@ export const Skills = () => {
             justify="center"
             _hover={{
               transform: 'translateY(-5px)',
-              // transition: 'transform 0.3s ease-in-out',
+              
             }}
           >
             <Box as={skill.icon} fontSize="3xl" color={isDarkMode ? 'blue.300' : 'blue.600'} mb={2} />

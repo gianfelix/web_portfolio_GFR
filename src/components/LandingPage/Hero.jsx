@@ -56,8 +56,8 @@ export const Hero = () => {
     <Box
       bgGradient={
         isDarkMode
-          ? "linear(to-r, gray.700, purple.900)"
-          : "linear(to-r, gray.300, blue.400)"
+          ? "linear(to-r, blue.700, purple.800)"
+          : "linear(to-r, white , blue.500)"
       }
       color="white"
       p={8}
@@ -131,9 +131,9 @@ export const Hero = () => {
           <CvModal isOpen={isModalOpen} onClose={closeModal} />
         </Flex>
       </MotionFlex>
-      <Flex ml="6%" maxW="550px" maxH="100%">
+      <Flex ml="13%" mr={"4%"} maxW="375px" maxH="50%">
         <MotionFlex
-          minH="55vh"
+          minH="30vh"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
