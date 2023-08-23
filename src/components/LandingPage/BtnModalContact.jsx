@@ -32,7 +32,7 @@ export const BtnModalContact = () => {
       <Button
         mr={4}
         colorScheme={isDarkMode ? "gray" : "brand"}
-        size="lg"
+        size={{ base: "sm", md: "lg" }}
         onClick={onOpen}
       >
         Contact Me

@@ -76,7 +76,7 @@ export const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         <Text
-          fontSize="4xl"
+          fontSize={{ base: "xl", md: "4xl" }}
           mt={4}
           color={colorMode === "light" ? "black" : "white"}
           textAlign="left"
@@ -84,7 +84,7 @@ export const Hero = () => {
           Welcome, I'm
         </Text>
         <Text
-          fontSize="5xl"
+          fontSize={{ base: "2xl", md: "5xl" }}
           fontWeight="bold"
           color={colorMode === "light" ? "black" : "white"}
           textAlign="left"
@@ -92,7 +92,7 @@ export const Hero = () => {
           Gian Felix Ramadan
         </Text>
         <MotionText
-          fontSize="3xl"
+          fontSize={{ base: "xl", md: "3xl" }}
           opacity={0.8}
           mt={2}
           color={colorMode === "light" ? "black" : "white"}
@@ -102,7 +102,7 @@ export const Hero = () => {
         </MotionText>
         <Box justifyItems="center">
           <Text
-            fontSize="xl"
+            fontSize={{ base: "md", md: "xl" }}
             mt={8}
             color={colorMode === "light" ? "black" : "white"}
             style={{ textAlign: "justify" }}
@@ -123,7 +123,7 @@ export const Hero = () => {
             borderWidth={2}
             borderColor={isDarkMode ? "white" : "brand.600"}
             color={isDarkMode ? "white" : "brand.700"}
-            size="lg"
+            size={{ base: "sm", md: "lg" }}
             onClick={openModal}
           >
             Show My CV

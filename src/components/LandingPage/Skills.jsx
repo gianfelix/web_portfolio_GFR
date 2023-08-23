@@ -31,10 +31,10 @@ export const Skills = () => {
       <Text
           fontSize={{ base: '2xl', md: '3xl' }}
           fontWeight="bold"
+          color={isDarkMode ? 'blue.200' : 'blue.800'}
           letterSpacing="wide"
           textTransform="uppercase"
-          bgGradient={isDarkMode ? 'linear(to-r, blue.300, blue.600)' : 'linear(to-r, blue.500, blue.700)'}
-          bgClip="text"
+          
         >
           SKILLS
         </Text>
