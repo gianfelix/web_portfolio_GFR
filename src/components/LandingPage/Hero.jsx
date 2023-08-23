@@ -61,12 +61,12 @@ export const Hero = () => {
       }
       color="white"
       p={8}
-      minH="92vh"
+      minH="70vh"
       display="flex"
       justifyContent="center"
       alignItems="center"
       px={"10%"}
-      borderRadius="lg"
+      
     >
       <MotionFlex
         direction="column"
@@ -131,9 +131,9 @@ export const Hero = () => {
           <CvModal isOpen={isModalOpen} onClose={closeModal} />
         </Flex>
       </MotionFlex>
-      <Flex ml="4%" maxW="600px" maxH="100%">
+      <Flex ml="6%" maxW="550px" maxH="100%">
         <MotionFlex
-          minH="60vh"
+          minH="55vh"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
