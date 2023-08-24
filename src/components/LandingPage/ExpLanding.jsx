@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -9,11 +9,16 @@ import {
   useColorMode,
   UnorderedList,
   ListItem,
+  Button,
 } from "@chakra-ui/react";
 
 const ExpLanding = () => {
   const { colorMode } = useColorMode();
   const isDarkmode = colorMode === "dark";
+
+  const [showMore, setShowMore] = useState(false);
+
+  const totalExperiences = 5;
 
   // Replace this state with your actual state logic for under maintenance
   const isUnderMaintenance = false; // Set to false since you have provided experience entries
@@ -35,7 +40,7 @@ const ExpLanding = () => {
     <Box p={4} bg={isDarkmode ? "gray.800" : "white"} align={"center"}>
       <Box maxW={"90%"} align={"left"}>
         <Flex direction="column" align="center" mt={8}>
-          <Heading size="xl" mb={10} color={isDarkmode ? "white" : "black"}>
+          <Heading size="xl" mb={5} color={isDarkmode ? "white" : "black"}>
             Experience
           </Heading>
 
@@ -129,63 +134,78 @@ const ExpLanding = () => {
                 </ListItem>
               </UnorderedList>
             </Box>
-            {/* Experience Entry 4 */}
-            <Box
-              p={4}
-              bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="md"
-              boxShadow={"md"}
-            >
-              <Text
-                fontSize="xl"
-                fontWeight={"bold"}
-                color={isDarkmode ? "gray.200" : "gray.600"}
-              >
-                2021
-              </Text>
-              <Heading size="lg">Operator SIG, Konsultan SinauGIS</Heading>
-              <UnorderedList pl={2}>
-                <ListItem>
-                  Bertanggungjawab dalam ekstraksi fitur geografi dari citra
-                  penginderaan jauh dalam penyusunan Peta Rencana Tataguna Lahan
-                  Desa Banjarasri, Kabupaten Kulonprogo, D. I. Y.
-                </ListItem>
-                <ListItem>
-                  Implementasi pemetaan partisipatif kepada pemerintah Desa
-                  Banjarasri dalam penyusunan Peta Rencana Tataguna Lahan.
-                </ListItem>
-              </UnorderedList>
-            </Box>
-            {/* Experience Entry 5 */}
-            <Box
-              p={4}
-              bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="md"
-              boxShadow={"md"}
-            >
-              <Text
-                fontSize="xl"
-                fontWeight={"bold"}
-                color={isDarkmode ? "gray.200" : "gray.600"}
-              >
-                2020 - 2021
-              </Text>
-              <Heading size="lg">
-                Asisten Peneliti, Master Program IPB University
-              </Heading>
-              <UnorderedList pl={2}>
-                <ListItem>
-                  Membuat model perubahan penutup lahan dan penggunaan lahan
-                  berbasis klasifikasi digital dengan algoritma maximum
-                  likelihood.
-                </ListItem>
-                <ListItem>
-                  Menguji akurasi model pemetaan penutup lahan dan penggunaan
-                  lahan multi-temporal.
-                </ListItem>
-              </UnorderedList>
-            </Box>
+
+            {showMore && (
+              <>
+                {/* Experience Entry 4 */}
+                <Box
+                  p={4}
+                  bg={isDarkmode ? "blue.700" : "blue.100"}
+                  borderRadius="md"
+                  boxShadow={"md"}
+                >
+                  <Text
+                    fontSize="xl"
+                    fontWeight={"bold"}
+                    color={isDarkmode ? "gray.200" : "gray.600"}
+                  >
+                    2021
+                  </Text>
+                  <Heading size="lg">Operator SIG, Konsultan SinauGIS</Heading>
+                  <UnorderedList pl={2}>
+                    <ListItem>
+                      Bertanggungjawab dalam ekstraksi fitur geografi dari citra
+                      penginderaan jauh dalam penyusunan Peta Rencana Tataguna
+                      Lahan Desa Banjarasri, Kabupaten Kulonprogo, D. I. Y.
+                    </ListItem>
+                    <ListItem>
+                      Implementasi pemetaan partisipatif kepada pemerintah Desa
+                      Banjarasri dalam penyusunan Peta Rencana Tataguna Lahan.
+                    </ListItem>
+                  </UnorderedList>
+                </Box>
+                {/* Experience Entry 5 */}
+                <Box
+                  p={4}
+                  bg={isDarkmode ? "blue.700" : "blue.100"}
+                  borderRadius="md"
+                  boxShadow={"md"}
+                >
+                  <Text
+                    fontSize="xl"
+                    fontWeight={"bold"}
+                    color={isDarkmode ? "gray.200" : "gray.600"}
+                  >
+                    2020 - 2021
+                  </Text>
+                  <Heading size="lg">
+                    Asisten Peneliti, Master Program IPB University
+                  </Heading>
+                  <UnorderedList pl={2}>
+                    <ListItem>
+                      Membuat model perubahan penutup lahan dan penggunaan lahan
+                      berbasis klasifikasi digital dengan algoritma maximum
+                      likelihood.
+                    </ListItem>
+                    <ListItem>
+                      Menguji akurasi model pemetaan penutup lahan dan
+                      penggunaan lahan multi-temporal.
+                    </ListItem>
+                  </UnorderedList>
+                </Box>
+              </>
+            )}
           </Stack>
+
+          {totalExperiences > 3 && (
+            <Box mt={4}>
+              {showMore ? (
+                <Button colorScheme="blue" onClick={() => setShowMore(false)}>Show Less Experiences</Button>
+              ) : (
+                <Button colorScheme="blue" onClick={() => setShowMore(true)}>Show More Experiences</Button>
+              )}
+            </Box>
+          )}
         </Flex>
       </Box>
     </Box>

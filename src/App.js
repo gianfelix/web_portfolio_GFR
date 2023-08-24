@@ -13,6 +13,7 @@ import WebGIS from "./pages/WebGIS";
 import WebGIS_2 from "./components/WebGIS/WebGIS_2";
 import Experience from "./pages/Experience";
 import CertificatesAwards from "./pages/CertificatesAwards";
+import { Projects } from "./components/LandingPage/Projects";
 
 
 const theme = extendTheme({
@@ -53,7 +54,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/webgis" element={<WebGIS />} />
             <Route path="/webgis-2" element={<WebGIS_2 />} />
-            <Route path="/experience" element={<Experience />} />
+            <Route path="/experiences" element={<Experience />} />
+            <Route path="/projects" element={<Projects/>} />
             <Route path="/certificates" element={<CertificatesAwards/>} />
             
           </Routes>

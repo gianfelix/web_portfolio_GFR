@@ -7,6 +7,7 @@ import Education from "../components/LandingPage/Education";
 
 import FooterLanding from "../components/LandingPage/FooterLanding";
 import ExpLanding from "../components/LandingPage/ExpLanding";
+import CertificatesAwards from "./CertificatesAwards";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
         <ExpLanding />
       </Box>
       <Projects />
+      <CertificatesAwards/>
       <FooterLanding />
     </>
   );
