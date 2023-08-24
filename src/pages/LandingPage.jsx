@@ -4,18 +4,21 @@ import { Hero } from "../components/LandingPage/Hero";
 import { Skills } from "../components/LandingPage/Skills";
 import { Projects } from "../components/LandingPage/Projects";
 import Education from "../components/LandingPage/Education";
-import Experience from "./Experience";
+
 import FooterLanding from "../components/LandingPage/FooterLanding";
+import ExpLanding from "../components/LandingPage/ExpLanding";
 
 const LandingPage = () => {
   return (
     <>
-    <Hero/>
-    {/* <Education/> */}
-    <Skills/>
-    <Experience/>
-    <Projects/>
-    <FooterLanding/>
+      <Hero />
+      {/* <Education/> */}
+      <Skills />
+      <Box mt={-8}>
+        <ExpLanding />
+      </Box>
+      <Projects />
+      <FooterLanding />
     </>
   );
 };

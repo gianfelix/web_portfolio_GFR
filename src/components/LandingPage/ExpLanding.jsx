@@ -11,7 +11,7 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 
-const Experience = () => {
+const ExpLanding = () => {
   const { colorMode } = useColorMode();
   const isDarkmode = colorMode === "dark";
 
@@ -192,4 +192,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExpLanding;

@@ -102,7 +102,7 @@ export const Hero = () => {
         </MotionText>
         <Box justifyItems="center">
           <Text
-            fontSize={{ base: "md", md: "xl" }}
+            fontSize={{ base: "sm", md: "xl" }}
             mt={8}
             color={colorMode === "light" ? "black" : "white"}
             style={{ textAlign: "justify" }}
