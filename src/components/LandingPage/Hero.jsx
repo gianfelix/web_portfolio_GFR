@@ -147,7 +147,7 @@ export const Hero = () => {
           <CvModal isOpen={isModalOpen} onClose={closeModal} />
         </Flex>
       </MotionFlex>
-      <Flex ml="13%" mr={"4%"} maxW="375px" maxH="50%">
+      <Flex ml="13%" mr={"3%"} minW={"450px"} maxH={"550px"}>
         <MotionFlex
           minH="30vh"
           initial={{ opacity: 0, x: -20 }}
@@ -156,12 +156,15 @@ export const Hero = () => {
         >
           <Image
             _hover={{ transform: "scale(1.05)" }}
+            objectPosition="center top"
             src="fotoku.jpg"
             alt="Gian Felix Ramadan"
             borderRadius="full"
             boxSize="100%"
             objectFit="cover"
             boxShadow="2xl"
+            height={"auto"}
+            width={"400px"}
           />
         </MotionFlex>
       </Flex>

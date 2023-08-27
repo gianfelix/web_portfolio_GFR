@@ -13,7 +13,8 @@ import WebGIS from "./pages/WebGIS";
 import WebGIS_2 from "./components/WebGIS/WebGIS_2";
 import Experience from "./pages/Experience";
 import CertificatesAwards from "./pages/CertificatesAwards";
-import { Projects } from "./components/LandingPage/Projects";
+import { Projects } from "./pages/Projects";
+
 
 
 const theme = extendTheme({

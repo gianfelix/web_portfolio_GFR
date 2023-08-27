@@ -30,23 +30,23 @@ export const Skills = () => {
     {
       icon: FaDatabase,
       title: "Back-end Development",
-      description: "Node.js, Express JS and REST API",
+      description: "Express JS, REST API, SQL and Postman",
     },
     {
       icon: FaServer,
       title: "Database",
-      description: "MongoDB, MySQL and PostGIS",
+      description: "MySQL, PostgreSQL and PostGIS",
     },
-    { icon: FaDesktop, title: "GIS Analyst", description: "ArcGIS and QGIS" },
+    { icon: FaDesktop, title: "GIS Analyst", description: "ArcGIS Pro, ArcGIS Desktop and QGIS" },
     {
       icon: FaSatellite,
       title: "Remote Sensing Analyst",
-      description: "ENVI, Agisoft, Google Earth Engine",
+      description: "Google Earth Engine, ENVI, Agisoft",
     },
     {
       icon: TbDrone,
       title: "Drone Operator",
-      description: "DJI, Pix4D, and Drone Deploy",
+      description: "DJI Apps, Pix4D, and Drone Deploy",
     },
   ];
 
@@ -102,7 +102,7 @@ export const Skills = () => {
             <Heading fontSize={{ base: "md", md: "lg" }} fontWeight="bold">
               {skill.title}
             </Heading>
-            <Text mt={1} textAlign="center" fontSize="md" px={"15%"}>
+            <Text mt={1} textAlign="center" fontSize="md" >
               {skill.description}
             </Text>
           </Flex>
