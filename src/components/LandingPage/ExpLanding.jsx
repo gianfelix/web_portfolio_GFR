@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -12,16 +11,15 @@ import {
   Button,
 } from "@chakra-ui/react";
 
+import { useNavigate } from "react-router-dom";
+
 const ExpLanding = () => {
   const { colorMode } = useColorMode();
   const isDarkmode = colorMode === "dark";
 
-  const [showMore, setShowMore] = useState(false);
+  const navigate = useNavigate();
 
-  const totalExperiences = 5;
-
-  // Replace this state with your actual state logic for under maintenance
-  const isUnderMaintenance = false; // Set to false since you have provided experience entries
+  const isUnderMaintenance = false;
 
   if (isUnderMaintenance) {
     return (
@@ -38,7 +36,7 @@ const ExpLanding = () => {
 
   return (
     <Box p={4} bg={isDarkmode ? "gray.800" : "white"} align={"center"}>
-      <Box maxW={"90%"} align={"left"}>
+      <Box minW={"65%"} maxW={"70%"} align={"left"}>
         <Flex direction="column" align="center" mt={8}>
           <Heading size="xl" mb={5} color={isDarkmode ? "white" : "black"}>
             Experience
@@ -47,7 +45,7 @@ const ExpLanding = () => {
           <Stack spacing={8}>
             {/* Experience Entry 1 */}
             <Box
-              p={4}
+              p={6}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -59,29 +57,30 @@ const ExpLanding = () => {
               >
                 2022
               </Text>
-              <Heading size="lg">
-                Konsultan Perorangan, Kantor Wilayah BPN Kalimantan Timur
+              <Heading size="lg" mb={2}>
+                Individual Consultant, Kantor Wilayah BPN Kalimantan Timur
               </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Memfasilitasi Pelaksanaan Reforma Agraria Tingkat Provinsi.
+                  Facilitated the Implementation of Agrarian Reform at the
+                  Provincial Level.
                 </ListItem>
                 <ListItem>
-                  Mengoordinasikan Penyediaan data pertanahan TORA dalam rangka
-                  Penataan Aset Provinsi Kalimantan Timur.
+                  Coordinated the Provision of TORA Land Data in the Context of
+                  Asset Management for East Kalimantan Province.
                 </ListItem>
                 <ListItem>
-                  Bertanggung jawab dalam pengolahan data spasial pertanahan
-                  berbasis GIS. Menyusun model
+                  Responsible for Processing GIS-based Spatial Land Data.
                 </ListItem>
                 <ListItem>
-                  spasial pertanahan berbasis Reforma Agraria dan GIS.
+                  Developed a Spatial Land Model based on Agrarian Reform and
+                  GIS.
                 </ListItem>
               </UnorderedList>
             </Box>
             {/* Experience Entry 2 */}
             <Box
-              p={4}
+              p={6}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -93,25 +92,25 @@ const ExpLanding = () => {
               >
                 2021
               </Text>
-              <Heading size="lg">
-                Operator Drone, Enumerator Fakultas Kehutanan Universitas Gadjah
-                Mada
+              <Heading size="lg" mb={2}>
+                Drone Operator, Enumerator of the Faculty of Forestry,
+                Universitas Gadjah Mada
               </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Pelaksana Monitoring Kawasan Rehabilitasi Mangrove di
-                  Kepulauan Riau berbasis Pemetaan Aerial menggunakan drone
-                  multirotor.
+                  Implementing Monitoring of Mangrove Rehabilitation Areas in
+                  the Riau Archipelago through Aerial Mapping Using a Multirotor
+                  Drone.
                 </ListItem>
                 <ListItem>
-                  Pengolah data photo geotagging hasil survei menggunakan
-                  software ArcGIS.
+                  Geotagging photo data processing survey results using ArcGIS
+                  software.
                 </ListItem>
               </UnorderedList>
             </Box>
             {/* Experience Entry 3 */}
             <Box
-              p={4}
+              p={6}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -123,89 +122,28 @@ const ExpLanding = () => {
               >
                 2021
               </Text>
-              <Heading size="lg">
-                Asisten Trainer Drone Mapping, Konsultan SinauGIS
-              </Heading>
+              <Heading size="lg" mb={2}>GIS Operator, SinauGIS Consultant</Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Membantu trainer utama dalam transfer materi dan praktek
-                  penggunaan Mission Planner, Drone multirotor, dan Agisoft
-                  tingkat mahasiswa dan pekerja.
+                  Responsible for extracting geographical features from remote
+                  sensing imagery for the preparation of the Banjarasri Village
+                  Land Use Plan Map in Kulonprogo Regency, DI Yogyakarta.
+                </ListItem>
+                <ListItem>
+                  Implemented participatory mapping for the government of
+                  Banjarasri Village during the Land Use Plan Map preparation.
                 </ListItem>
               </UnorderedList>
             </Box>
-
-            {showMore && (
-              <>
-                {/* Experience Entry 4 */}
-                <Box
-                  p={4}
-                  bg={isDarkmode ? "blue.700" : "blue.100"}
-                  borderRadius="md"
-                  boxShadow={"md"}
-                >
-                  <Text
-                    fontSize="xl"
-                    fontWeight={"bold"}
-                    color={isDarkmode ? "gray.200" : "gray.600"}
-                  >
-                    2021
-                  </Text>
-                  <Heading size="lg">Operator SIG, Konsultan SinauGIS</Heading>
-                  <UnorderedList pl={2}>
-                    <ListItem>
-                      Bertanggungjawab dalam ekstraksi fitur geografi dari citra
-                      penginderaan jauh dalam penyusunan Peta Rencana Tataguna
-                      Lahan Desa Banjarasri, Kabupaten Kulonprogo, D. I. Y.
-                    </ListItem>
-                    <ListItem>
-                      Implementasi pemetaan partisipatif kepada pemerintah Desa
-                      Banjarasri dalam penyusunan Peta Rencana Tataguna Lahan.
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                {/* Experience Entry 5 */}
-                <Box
-                  p={4}
-                  bg={isDarkmode ? "blue.700" : "blue.100"}
-                  borderRadius="md"
-                  boxShadow={"md"}
-                >
-                  <Text
-                    fontSize="xl"
-                    fontWeight={"bold"}
-                    color={isDarkmode ? "gray.200" : "gray.600"}
-                  >
-                    2020 - 2021
-                  </Text>
-                  <Heading size="lg">
-                    Asisten Peneliti, Master Program IPB University
-                  </Heading>
-                  <UnorderedList pl={2}>
-                    <ListItem>
-                      Membuat model perubahan penutup lahan dan penggunaan lahan
-                      berbasis klasifikasi digital dengan algoritma maximum
-                      likelihood.
-                    </ListItem>
-                    <ListItem>
-                      Menguji akurasi model pemetaan penutup lahan dan
-                      penggunaan lahan multi-temporal.
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-              </>
-            )}
           </Stack>
-
-          {totalExperiences > 3 && (
-            <Box mt={4}>
-              {showMore ? (
-                <Button colorScheme="blue" onClick={() => setShowMore(false)}>Show Less Experiences</Button>
-              ) : (
-                <Button colorScheme="blue" onClick={() => setShowMore(true)}>Show More Experiences</Button>
-              )}
-            </Box>
-          )}
+          <Button
+            mt={5}
+            onClick={() => navigate("/experiences")}
+            colorScheme={colorMode === "light" ? "blue" : "blue"}
+            // color={colorMode === "light" ? "gray.100" : "black"}
+          >
+            Show More My Experiences
+          </Button>
         </Flex>
       </Box>
     </Box>

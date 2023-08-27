@@ -69,16 +69,19 @@ export const Skills = () => {
         </Text>
       </Heading>
       <SimpleGrid
-        justifyItems="center"
+        display={"flex"}
+        flexWrap={"wrap"}
+        justifyContent={"center"}
         columns={{ base: 1, xl: 3 }}
-        spacing={8}
+        spacing={10}
+        // spacingX={{ base: 5, xl: 10 }}
       >
         {skillsData.map((skill) => (
           <Flex
             key={skill.title}
-            p={4}
+            p={5}
             // maxW={"md"}
-            minW={{ base: "500px" , md: "600px", xl: "400px"}}
+            minW={{ base: "450px", md: "600px", xl: "450px" }}
             bg={isDarkMode ? "blue.700" : "blue.100"}
             borderRadius="lg"
             boxShadow="md"
@@ -99,7 +102,7 @@ export const Skills = () => {
             <Heading fontSize={{ base: "md", md: "lg" }} fontWeight="bold">
               {skill.title}
             </Heading>
-            <Text mt={1} textAlign="center" fontSize="md">
+            <Text mt={1} textAlign="center" fontSize="md" px={"15%"}>
               {skill.description}
             </Text>
           </Flex>

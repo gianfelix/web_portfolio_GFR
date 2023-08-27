@@ -21,7 +21,13 @@ export const Hero = () => {
     setIsModalOpen(false);
   };
 
-  const fullText = "Analyst and Spatial Programmer   ";
+  const textOptions = [
+    "GIS Analyst and Spatial Programmer   ",
+    "Web Developer     ",
+  ];
+  const [textIndex, setTextIndex] = useState(0);
+  const currentText = textOptions[textIndex];
+
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,17 +36,18 @@ export const Hero = () => {
     const delay = isDeleting ? 65 : 90;
     const nextIndex = isDeleting ? currentIndex - 1 : currentIndex + 1;
 
-    if (nextIndex <= fullText.length && nextIndex >= 0) {
-      setTypedText(fullText.slice(0, nextIndex));
+    if (nextIndex <= currentText.length && nextIndex >= 0) {
+      setTypedText(currentText.slice(0, nextIndex));
     }
 
-    if (nextIndex > fullText.length) {
+    if (nextIndex > currentText.length) {
       setIsDeleting(true);
     }
 
     if (nextIndex < 0) {
       setIsDeleting(false);
       setCurrentIndex(0);
+      setTextIndex((textIndex + 1) % textOptions.length);
     }
 
     const timeoutId = setTimeout(() => {
@@ -50,7 +57,14 @@ export const Hero = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [typedText, isDeleting, currentIndex]);
+  }, [
+    typedText,
+    isDeleting,
+    currentIndex,
+    currentText,
+    textIndex,
+    textOptions,
+  ]);
 
   return (
     <Box
@@ -66,7 +80,6 @@ export const Hero = () => {
       justifyContent="center"
       alignItems="center"
       px={"10%"}
-      
     >
       <MotionFlex
         direction="column"
@@ -98,7 +111,7 @@ export const Hero = () => {
           color={colorMode === "light" ? "black" : "white"}
           textAlign="left"
         >
-          A GIS {typedText}
+          A {typedText}
         </MotionText>
         <Box justifyItems="center">
           <Text
@@ -107,12 +120,15 @@ export const Hero = () => {
             color={colorMode === "light" ? "black" : "white"}
             style={{ textAlign: "justify" }}
           >
-            I am a passionate GIS Analyst and Spatial Programmer with a keen
-            interest in utilizing geospatial data to solve real-world problems.
-            With a strong background in geographic information systems (GIS) and
-            programming, I have successfully contributed to various projects
-            that involve spatial analysis, data visualization, and geospatial
-            application development.
+            I am a person who is passionate about crafting solutions through
+            technology and creative problem solving. With a strong background in
+            GIS, spatial programming, and web development, I have the ability to
+            provide concrete solutions to real-world challenges using geospatial
+            data and programming languages as key tools. I enjoy creating
+            dynamic and user-friendly websites, with expertise in combining
+            front-end and back-end elements. My work is a platform that combines
+            the richness of geospatial data with web programming skills,
+            resulting in innovative solutions that make a positive impact.
           </Text>
         </Box>
         <Flex mt={8} justify="center">

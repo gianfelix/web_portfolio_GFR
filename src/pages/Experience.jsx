@@ -33,7 +33,7 @@ const Experience = () => {
 
   return (
     <Box p={4} bg={isDarkmode ? "gray.800" : "white"} align={"center"}>
-      <Box maxW={"90%"} align={"left"}>
+      <Box minW={"70%"} maxW={"85%"} align={"left"}>
         <Flex direction="column" align="center" mt={8}>
           <Heading size="xl" mb={10} color={isDarkmode ? "white" : "black"}>
             Experience
@@ -42,7 +42,7 @@ const Experience = () => {
           <Stack spacing={8}>
             {/* Experience Entry 1 */}
             <Box
-              p={4}
+              p={7}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -54,29 +54,30 @@ const Experience = () => {
               >
                 2022
               </Text>
-              <Heading size="lg">
-                Konsultan Perorangan, Kantor Wilayah BPN Kalimantan Timur
+              <Heading size="lg" mb={2}>
+                Individual Consultant, Kantor Wilayah BPN Kalimantan Timur
               </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Memfasilitasi Pelaksanaan Reforma Agraria Tingkat Provinsi.
+                  Facilitated the Implementation of Agrarian Reform at the
+                  Provincial Level
                 </ListItem>
                 <ListItem>
-                  Mengoordinasikan Penyediaan data pertanahan TORA dalam rangka
-                  Penataan Aset Provinsi Kalimantan Timur.
+                  Coordinated the Provision of TORA Land Data in the Context of
+                  Asset Management for East Kalimantan Province
                 </ListItem>
                 <ListItem>
-                  Bertanggung jawab dalam pengolahan data spasial pertanahan
-                  berbasis GIS. Menyusun model
+                  Responsible for Processing GIS-based Spatial Land Data
                 </ListItem>
                 <ListItem>
-                  spasial pertanahan berbasis Reforma Agraria dan GIS.
+                  Developed a Spatial Land Model based on Agrarian Reform and
+                  GIS
                 </ListItem>
               </UnorderedList>
             </Box>
             {/* Experience Entry 2 */}
             <Box
-              p={4}
+              p={7}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -88,25 +89,25 @@ const Experience = () => {
               >
                 2021
               </Text>
-              <Heading size="lg">
-                Operator Drone, Enumerator Fakultas Kehutanan Universitas Gadjah
-                Mada
+              <Heading size="lg" mb={2}>
+                Drone Operator, Enumerator of the Faculty of Forestry,
+                Universitas Gadjah Mada
               </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Pelaksana Monitoring Kawasan Rehabilitasi Mangrove di
-                  Kepulauan Riau berbasis Pemetaan Aerial menggunakan drone
-                  multirotor.
+                  Implementing Monitoring of Mangrove Rehabilitation Areas in
+                  the Riau Archipelago through Aerial Mapping Using a Multirotor
+                  Drone
                 </ListItem>
                 <ListItem>
-                  Pengolah data photo geotagging hasil survei menggunakan
-                  software ArcGIS.
+                  Geotagging photo data processing survey results using ArcGIS
+                  software
                 </ListItem>
               </UnorderedList>
             </Box>
             {/* Experience Entry 3 */}
             <Box
-              p={4}
+              p={7}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -118,20 +119,20 @@ const Experience = () => {
               >
                 2021
               </Text>
-              <Heading size="lg">
-                Asisten Trainer Drone Mapping, Konsultan SinauGIS
+              <Heading size="lg" mb={2}>
+                Assistant Drone Mapping Trainer, SinauGIS Consultant
               </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Membantu trainer utama dalam transfer materi dan praktek
-                  penggunaan Mission Planner, Drone multirotor, dan Agisoft
-                  tingkat mahasiswa dan pekerja.
+                  Assisting lead trainers in delivering content and conducting
+                  hands-on practice sessions using Mission Planner, multirotor
+                  drones, and Agisoft software for both students and workers.
                 </ListItem>
               </UnorderedList>
             </Box>
             {/* Experience Entry 4 */}
             <Box
-              p={4}
+              p={7}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -143,22 +144,22 @@ const Experience = () => {
               >
                 2021
               </Text>
-              <Heading size="lg">Operator SIG, Konsultan SinauGIS</Heading>
+              <Heading size="lg" mb={2}>GIS Operator, SinauGIS Consultant</Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Bertanggungjawab dalam ekstraksi fitur geografi dari citra
-                  penginderaan jauh dalam penyusunan Peta Rencana Tataguna Lahan
-                  Desa Banjarasri, Kabupaten Kulonprogo, D. I. Y.
+                  Responsible for extracting geographical features from remote
+                  sensing imagery for the preparation of the Banjarasri Village
+                  Land Use Plan Map in Kulonprogo Regency, DI Yogyakarta.
                 </ListItem>
                 <ListItem>
-                  Implementasi pemetaan partisipatif kepada pemerintah Desa
-                  Banjarasri dalam penyusunan Peta Rencana Tataguna Lahan.
+                  Implemented participatory mapping for the government of
+                  Banjarasri Village during the Land Use Plan Map preparation.
                 </ListItem>
               </UnorderedList>
             </Box>
             {/* Experience Entry 5 */}
             <Box
-              p={4}
+              p={7}
               bg={isDarkmode ? "blue.700" : "blue.100"}
               borderRadius="md"
               boxShadow={"md"}
@@ -170,18 +171,110 @@ const Experience = () => {
               >
                 2020 - 2021
               </Text>
-              <Heading size="lg">
-                Asisten Peneliti, Master Program IPB University
+              <Heading size="lg" mb={2}>
+                Research Assistant, Master’s Program, IPB University
               </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
-                  Membuat model perubahan penutup lahan dan penggunaan lahan
-                  berbasis klasifikasi digital dengan algoritma maximum
-                  likelihood.
+                  Developed a model for land cover change and land use using
+                  digital classification with the maximum likelihood algorithm.
                 </ListItem>
                 <ListItem>
-                  Menguji akurasi model pemetaan penutup lahan dan penggunaan
-                  lahan multi-temporal.
+                  Conducted accuracy testing for land cover and multi-temporal
+                  land use mapping models.
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            {/* Experience Entry 6 */}
+            <Box
+              p={7}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="md"
+              boxShadow={"md"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
+                2020 - 2021
+              </Text>
+              <Heading size="lg" mb={2}>
+                Assistant for Cartography Practicum, Faculty of Geography,
+                Universitas Gadjah Mada
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Delivered instructions and guided students in using mapping
+                  instruments and software.
+                </ListItem>
+                <ListItem>
+                  Collaborated with the team to formulate concepts and design
+                  final exam questions.
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            {/* Experience Entry 7 */}
+            <Box
+              p={7}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="md"
+              boxShadow={"md"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
+                2020 - 2021
+              </Text>
+              <Heading size="lg" mb={2}>
+                Assistant for Remote Sensing Practicum, Universitas Gadjah Mada
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Coordinated the implementation of remote sensing practical
+                  sessions.
+                </ListItem>
+                <ListItem>
+                  Led material delivery, processed remote sensing data, and
+                  supervised the practical use of multi-rotor drones.
+                </ListItem>
+                <ListItem>
+                  Contributed to designing the implementation concept, as well
+                  as creating final exam questions in collaboration with the
+                  assistant team.
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            {/* Experience Entry 8 */}
+            <Box
+              p={7}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="md"
+              boxShadow={"md"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
+                2020 - 2021
+              </Text>
+              <Heading size="lg" mb={2}>
+                Assistant for GIS Practicum, Universitas Gadjah Mada
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Coordinated the execution of GIS practicum sessions.
+                </ListItem>
+                <ListItem>
+                  Responsible for delivering instructional content and
+                  processing GIS data using ArcGIS and QGIS.
+                </ListItem>
+                <ListItem>
+                  Collaborated with the assistant team to formulate
+                  implementation strategies and design final exam questions.
                 </ListItem>
               </UnorderedList>
             </Box>
