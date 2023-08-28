@@ -36,6 +36,7 @@ const Navbar = () => {
     >
       <Flex p={4} align="center" justifyContent="space-between">
         <HStack spacing={4} align="center">
+
           {/* Hamburger Menu  */}
 
           <Menu>
@@ -60,12 +61,50 @@ const Navbar = () => {
               >
                 About
               </MenuItem>
-              <MenuItem
-                onClick={() => navigate("/experience")}
-                _hover={{ bg: "brand.400" }}
-              >
-                Experience
-              </MenuItem>
+              
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  textAlign={"left"}
+                  icon={
+                    <Text
+                      color={colorMode === "light" ? "black" : "white"}
+                      fontWeight={"normal"}
+                      mr={"10%"}
+                    >
+                      Experiences & Projects
+                    </Text>
+                  }
+                  _hover={{ bg: "brand.400" }}
+                  w={"100%"}
+                  colorScheme="none"
+                  borderRadius={"none"}
+                ></MenuButton>
+                <MenuList
+                  // bg={colorMode === "light" ? "white" : "gray.800"}
+                  border="1px solid"
+                  borderColor={colorMode === "light" ? "gray.200" : "gray.600"}
+                  boxShadow={"md"}
+                  ml={10}
+                  position={"absolute"}
+                  top={"-55px"}
+                  left={"185px"}
+                >
+                  <MenuItem
+                    onClick={() => navigate("/experiences")}
+                    _hover={{ bg: "brand.300" }}
+                  >
+                    Experiences
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => navigate("/projects")}
+                    _hover={{ bg: "brand.300" }}
+                  >
+                    Projects
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+
               <MenuItem
                 onClick={() => navigate("/certificates")}
                 _hover={{ bg: "brand.400" }}
@@ -167,10 +206,7 @@ const Navbar = () => {
             About
           </Box>
           <Box
-            // onClick={() => navigate("/experience")}
-            // cursor="pointer"
-            // color={colorMode === "light" ? "black" : "white"}
-            // _hover={{ color: "brand.500" }}
+            
           >
             <NavbarExpProj />
           </Box>
