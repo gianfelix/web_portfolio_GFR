@@ -115,7 +115,7 @@ export const Hero = () => {
         </MotionText>
         <Box justifyItems="center">
           <Text
-            fontSize={{ base: "sm", md: "xl" }}
+            fontSize={{ base: "sm", md: "lg" }}
             mt={8}
             color={colorMode === "light" ? "black" : "white"}
             style={{ textAlign: "justify" }}
@@ -147,7 +147,7 @@ export const Hero = () => {
           <CvModal isOpen={isModalOpen} onClose={closeModal} />
         </Flex>
       </MotionFlex>
-      <Flex ml="13%" mr={"3%"} minW={"450px"} maxH={"550px"}>
+      <Flex ml={{ base: "5%", lg: "13%" }} mr={"3%"} minW={{ base: "250px", lg: "450px"}} maxH={"550px"}>
         <MotionFlex
           minH="30vh"
           initial={{ opacity: 0, x: -20 }}
