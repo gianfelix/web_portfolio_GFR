@@ -57,14 +57,19 @@ export const Projects = () => {
       description:
         "The research entitled 'Prediction and Simulation of Land Use and Land Cover Changes Using Open Source QGIS. A Case Study of Purwokerto, Central Java, Indonesia' is a project on mapping land cover changes and predicting them in the future. This mapping uses the MOLUSCE plugin available in QGIS software. The mapping results show a fairly good accuracy, with a land change prediction accuracy of 75.26%.",
       demoLink: "https://journal.ugm.ac.id/ijg/article/view/68702",
-      githubLink: "https://github.com/gianfelix/mypublication/blob/main/Gian%20Felix%20R_Prediction%20and%20Simulation%20of%20Land%20Use%20and%20Land%20Cover%20Changes%20Using%20Open%20Source%20QGIS.%20A%20Case%20Study%20of%20Purwokerto%2C%20Central%20Java%2C%20Indonesia.pdf",
+      githubLink:
+        "https://github.com/gianfelix/mypublication/blob/main/Gian%20Felix%20R_Prediction%20and%20Simulation%20of%20Land%20Use%20and%20Land%20Cover%20Changes%20Using%20Open%20Source%20QGIS.%20A%20Case%20Study%20of%20Purwokerto%2C%20Central%20Java%2C%20Indonesia.pdf",
     },
     {
-      title: "Analysis Spatial Pattern of Urban Growth Using Remote Sensing Data: A Study in Purwokerto, Central Java, Indonesia",
+      title:
+        "Analysis Spatial Pattern of Urban Growth Using Remote Sensing Data: A Study in Purwokerto, Central Java, Indonesia",
       imageSrc: "journal2.jpg",
-      description: "Research on mapping the urban growth of the city in the study area of Purwokerto City. This research uses maximum likelihood classification to classify the existing land cover. The classification results during 2008, 2013 and 2018 can be analyzed to determine the direction of urban growth that occurs by making quadrant directions.",
-      demoLink: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12082/2616207/Analysis-spatial-pattern-of-urban-growth-using-remote-sensing-data/10.1117/12.2616207.short",
-      githubLink: "https://github.com/gianfelix/mypublication/blob/main/ProceedingsofSPIE_Analysis%20Spatial%20Pattern%20of%20Urban%20Growth%20Using%20Remote%20Sensing%20Data%20a%20Study%20in%20Purwokerto%2C%20Central%20Java%2C%20Indonesia.pdf",
+      description:
+        "Research on mapping the urban growth of the city in the study area of Purwokerto City. This research uses maximum likelihood classification to classify the existing land cover. The classification results during 2008, 2013 and 2018 can be analyzed to determine the direction of urban growth that occurs by making quadrant directions.",
+      demoLink:
+        "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12082/2616207/Analysis-spatial-pattern-of-urban-growth-using-remote-sensing-data/10.1117/12.2616207.short",
+      githubLink:
+        "https://github.com/gianfelix/mypublication/blob/main/ProceedingsofSPIE_Analysis%20Spatial%20Pattern%20of%20Urban%20Growth%20Using%20Remote%20Sensing%20Data%20a%20Study%20in%20Purwokerto%2C%20Central%20Java%2C%20Indonesia.pdf",
     },
     // Add more projects as needed
   ];
@@ -75,14 +80,9 @@ export const Projects = () => {
         Projects
       </Heading>
       <SimpleGrid
-        display={"flex"}
-        // flexWrap={"wrap"}
-        justifyContent={"space-evenly"}
-        columns={{ base: 1, xl: 2 }}
+        columns={{ base: 1, md: 2, xl: 4 }}
         spacing={4}
-        // ml={20}
-        // mr={20}
-        maxH={"auto"}
+        justifyItems="center"
       >
         {projectsData.map((project, index) => (
           <Box
@@ -91,9 +91,6 @@ export const Projects = () => {
             borderRadius="3xl"
             boxShadow="md"
             p={5}
-            minW={{ base: "450px", md: "600px", xl: "450px" }}
-            // minH={"60%"}
-            // maxH={"auto"}
           >
             <Image
               src={project.imageSrc}
@@ -101,24 +98,15 @@ export const Projects = () => {
               objectFit="cover"
               borderRadius="3xl"
               mb={4}
-              minW={"100%"}
-              minH={"40%"}
-              // maxH={"auto"}
             />
-            <Heading
-              fontSize={{ base: "lg", xl: "xl" }}
-              fontWeight="bold"
-              mb={2}
-            >
+            <Heading fontSize="xl" fontWeight="bold" mb={2}>
               {project.title}
             </Heading>
-            {/* Deskripsi projek */}
-            <Text fontSize={{ base: "sm", xl: "md" }} textAlign={"justify"}>
+            <Text fontSize="md" textAlign="justify">
               {showFullDescription[index]
                 ? project.description
                 : project.description.slice(0, 210) + "..."}
             </Text>
-            {/* Tombol "Read More" */}
             {!showFullDescription[index] && (
               <Link
                 display="block"
@@ -135,13 +123,7 @@ export const Projects = () => {
                 Read More
               </Link>
             )}
-            <Flex
-              justifyContent="space-around"
-              mt={1}
-              pos={"relative"}
-              bottom={0}
-              pt={"auto"}
-            >
+            <Flex justifyContent="space-between" mt={2}>
               <Link
                 href={project.demoLink}
                 color={isDarkMode ? "blue.300" : "blue.600"}
