@@ -4,6 +4,8 @@ import "leaflet/dist/leaflet.css";
 import { Box, Button, Heading, Icon, useColorMode } from "@chakra-ui/react";
 import { SiOpenstreetmap, SiGooglestreetview } from "react-icons/si";
 import adminKotaTKData from "../../GeoJSON/admin_KotaYK.json";
+// import INDONESIA_KAB_0 from "../../GeoJSON/INDONESIA_KAB_0.js";
+import indonesia_kab from "../../GeoJSON/indonesia_kab.geojson"
 
 const AdminKotaYK = () => {
   const { colorMode } = useColorMode(); // Get the current color mode

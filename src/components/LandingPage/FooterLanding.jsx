@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Flex, Text, Link, Icon } from "@chakra-ui/react";
+import { Box, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/react";
 import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const FooterLanding = () => {
+  const { colorMode } = useColorMode();
+  const isDarkMode = colorMode === "dark";
   return (
-    <Box bgColor="gray.800" color="white" py={8}>
+    <Box bgColor={isDarkMode ? "blue.700" : "gray.800"} color="white" py={8}>
       <Flex justifyContent="space-between" alignItems="center" px={6}>
         <Text fontSize="lg" fontWeight="bold">
           Felix's Portfolio

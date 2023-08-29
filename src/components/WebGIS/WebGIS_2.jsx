@@ -13,10 +13,11 @@ const WebGIS = () => {
       value: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     },
     {
-      label: "Mapbox Satellite",
+      label: "Google Satellite",
       value:
-        "https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/{z}/{x}/{y}?access_token=YOUR_MAPBOX_TOKEN"
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
     },
+   
     // Add more basemap options here
   ];
 
@@ -24,13 +25,13 @@ const WebGIS = () => {
     setSelectedLayer(value);
   };
 
-  const position = [0.505, 100.09]; // Latlong
+  const position = [-7.101, 110.09]; // Latlong
 
   return (
     <MapContainer
       center={position}
-      zoom={10}
-      style={{ zIndex: 0, height: "90vh", width: "100%" }}
+      zoom={8}
+      style={{ zIndex: 0, height: "93vh", width: "100%" }}
     >
       <div
         style={{
@@ -46,9 +47,9 @@ const WebGIS = () => {
             key={option.value}
             onClick={() => handleBasemapChange(option.value)}
             style={{
-              marginTop: "80px",
+              marginTop: "835px",
               marginRight: "10px",
-              padding: "6px 12px",
+              padding: "10px 12px",
               border: "none",
               backgroundColor:
                 selectedLayer === option.value ? "#3182CE" : "#63B3ED",
@@ -64,9 +65,9 @@ const WebGIS = () => {
         url={selectedLayer}
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={position}>
+      {/* <Marker position={position}>
         <Popup>A sample marker on the map.</Popup>
-      </Marker>
+      </Marker> */}
     </MapContainer>
   );
 };
