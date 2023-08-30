@@ -18,7 +18,20 @@ import CvModal from "./CvModal";
 const MotionFlex = motion(Flex);
 const MotionText = motion(Text);
 
-export const Hero = ({ userLocation }) => {
+const getReverseGeolocation = async (latitude, longitude) => {
+  try {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching reverse geolocation:", error);
+    return null;
+  }
+};
+
+export const Hero = () => {
   const { colorMode } = useColorMode();
   const isDarkMode = colorMode === "dark";
 
@@ -42,8 +55,9 @@ export const Hero = ({ userLocation }) => {
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showJogjaAlert, setShowJogjaAlert] = useState(false);
-  const [showOtherAlert, setShowOtherAlert] = useState(false);
+  const [userLocation, setUserLocation] = useState("");
+  const [showLocationAlert, setShowLocationAlert] = useState(false);
+  const [showOtherLocationAlert, setShowOtherLocationAlert] = useState(false);
 
   useEffect(() => {
     const delay = isDeleting ? 65 : 90;
@@ -80,28 +94,43 @@ export const Hero = ({ userLocation }) => {
   ]);
 
   useEffect(() => {
-    if (userLocation === "Jogja") {
-      setShowJogjaAlert(true);
+    const fetchUserLocation = async () => {
+      try {
+        // Get user's geolocation using browser's Geolocation API
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
 
-      const hideJogjaAlertTimeout = setTimeout(() => {
-        setShowJogjaAlert(false);
-      }, 4000);
+            const geolocationData = await getReverseGeolocation(
+              latitude,
+              longitude
+            );
 
-      return () => {
-        clearTimeout(hideJogjaAlertTimeout);
-      };
-    } else if (userLocation === "Other") {
-      setShowOtherAlert(true);
+            if (geolocationData) {
+              const address = geolocationData.display_name;
+              setUserLocation(address);
+              setShowLocationAlert(
+                address.includes("YourLocationKeywordHere")
+              );
+              setShowOtherLocationAlert(
+                !address.includes("YourLocationKeywordHere")
+              );
+            }
+          },
+          (error) => {
+            console.error("Error getting geolocation:", error);
+            setUserLocation("Other");
+          }
+        );
+      } catch (error) {
+        console.error("Geolocation is not supported by this browser.");
+        setUserLocation("Other");
+      }
+    };
 
-      const hideOtherAlertTimeout = setTimeout(() => {
-        setShowOtherAlert(false);
-      }, 6400);
-
-      return () => {
-        clearTimeout(hideOtherAlertTimeout);
-      };
-    }
-  }, [userLocation]);
+    fetchUserLocation();
+  }, []);
 
   return (
     <Box
@@ -125,19 +154,30 @@ export const Hero = ({ userLocation }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {showJogjaAlert && (
+        {showLocationAlert && (
           <Alert status="info" mb={4}>
             <AlertIcon />
-            <AlertTitle color={colorMode === "light" ? "black" : "white"}>
-              You are in Yogyakarta!
+            <AlertTitle
+              textAlign={"center"}
+              color={colorMode === "light" ? "black" : "white"}
+            >
+              You are in Your Location!
             </AlertTitle>
+            <Text
+              fontSize="sm"
+              color={colorMode === "light" ? "black" : "white"}
+            >
+              {`Your current location: ${userLocation}`}
+            </Text>
           </Alert>
         )}
-        {showOtherAlert && (
+        {showOtherLocationAlert && (
           <Alert status="warning" mb={4}>
             <AlertIcon />
-            <AlertTitle color={colorMode === "light" ? "black" : "white"}>
-              You are not in Yogyakarta!
+            <AlertTitle
+              color={colorMode === "light" ? "black" : "white"}
+            >
+              You are in  ({userLocation})
             </AlertTitle>
           </Alert>
         )}
