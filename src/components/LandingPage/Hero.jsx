@@ -1,5 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Box, Flex, Text, Image, useColorMode, Button, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Image,
+  useColorMode,
+  Button,
+  Heading,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BtnModalContact } from "./BtnModalContact";
 import CvModal from "./CvModal";
@@ -7,7 +18,7 @@ import CvModal from "./CvModal";
 const MotionFlex = motion(Flex);
 const MotionText = motion(Text);
 
-export const Hero = ({userLocation}) => {
+export const Hero = ({ userLocation }) => {
   const { colorMode } = useColorMode();
   const isDarkMode = colorMode === "dark";
 
@@ -31,6 +42,7 @@ export const Hero = ({userLocation}) => {
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const delay = isDeleting ? 65 : 90;
@@ -66,6 +78,20 @@ export const Hero = ({userLocation}) => {
     textOptions,
   ]);
 
+  useEffect(() => {
+    if (userLocation === "Jogja") {
+      setShowAlert(true);
+
+      const hideAlertTimeout = setTimeout(() => {
+        setShowAlert(false);
+      }, 4000); // Adjust the time here (in milliseconds) for how long you want the alert to be visible
+
+      return () => {
+        clearTimeout(hideAlertTimeout);
+      };
+    }
+  }, [userLocation]);
+
   return (
     <Box
       bgGradient={
@@ -81,7 +107,6 @@ export const Hero = ({userLocation}) => {
       alignItems="center"
       px={"10%"}
     >
-      
       <MotionFlex
         direction="column"
         textAlign="center"
@@ -89,14 +114,14 @@ export const Hero = ({userLocation}) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <Text
-          fontSize={{ base: 'xl', md: '4xl' }}
-          mt={4}
-          color={colorMode === 'light' ? 'black' : 'white'}
-          textAlign="left"
-        >
-          {userLocation === 'Jogja' ? 'Selamat datang anda berada di Jogja!' : 'Anda tidak berada di jogja,'}
-        </Text>
+        {showAlert && (
+          <Alert status="info" mb={4}>
+            <AlertIcon />
+            <AlertTitle color={colorMode === "light" ? "black" : "white"}>
+              Selamat datang, Anda berada di Jogja!
+            </AlertTitle>
+          </Alert>
+        )}
         <Text
           fontSize={{ base: "xl", md: "4xl" }}
           mt={4}
@@ -156,7 +181,12 @@ export const Hero = ({userLocation}) => {
           <CvModal isOpen={isModalOpen} onClose={closeModal} />
         </Flex>
       </MotionFlex>
-      <Flex ml={{ base: "5%", lg: "13%" }} mr={"3%"} minW={{ base: "250px", lg: "450px"}} maxH={"550px"}>
+      <Flex
+        ml={{ base: "5%", lg: "13%" }}
+        mr={"3%"}
+        minW={{ base: "250px", lg: "450px" }}
+        maxH={"550px"}
+      >
         <MotionFlex
           minH="30vh"
           initial={{ opacity: 0, x: -20 }}
