@@ -110,9 +110,7 @@ export const Hero = () => {
             if (geolocationData) {
               const address = geolocationData.display_name;
               setUserLocation(address);
-              setShowLocationAlert(
-                address.includes("YourLocationKeywordHere")
-              );
+              setShowLocationAlert(address.includes("YourLocationKeywordHere"));
               setShowOtherLocationAlert(
                 !address.includes("YourLocationKeywordHere")
               );
@@ -132,6 +130,30 @@ export const Hero = () => {
     fetchUserLocation();
   }, []);
 
+  useEffect(() => {
+    if (showLocationAlert) {
+      const locationAlertTimeout = setTimeout(() => {
+        setShowLocationAlert(false);
+      }, 6000);
+
+      return () => {
+        clearTimeout(locationAlertTimeout);
+      };
+    }
+  }, [showLocationAlert]);
+
+  useEffect(() => {
+    if (showOtherLocationAlert) {
+      const otherLocationAlertTimeout = setTimeout(() => {
+        setShowOtherLocationAlert(false);
+      }, 6000);
+
+      return () => {
+        clearTimeout(otherLocationAlertTimeout);
+      };
+    }
+  }, [showOtherLocationAlert]);
+
   return (
     <Box
       bgGradient={
@@ -145,7 +167,8 @@ export const Hero = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      px={"10%"}
+      px={"12%"}
+      minW={"100%"}
     >
       <MotionFlex
         direction="column"
@@ -160,15 +183,10 @@ export const Hero = () => {
             <AlertTitle
               textAlign={"center"}
               color={colorMode === "light" ? "black" : "white"}
+              fontSize={{ base: "sm", md: "md" }}
             >
-              You are in Your Location!
+              Your location: {userLocation}
             </AlertTitle>
-            <Text
-              fontSize="sm"
-              color={colorMode === "light" ? "black" : "white"}
-            >
-              {`Your current location: ${userLocation}`}
-            </Text>
           </Alert>
         )}
         {showOtherLocationAlert && (
@@ -176,13 +194,14 @@ export const Hero = () => {
             <AlertIcon />
             <AlertTitle
               color={colorMode === "light" ? "black" : "white"}
+              fontSize={{ base: "sm", md: "md" }}
             >
-              You are in  ({userLocation})
+              Your location: {userLocation}
             </AlertTitle>
           </Alert>
         )}
         <Text
-          fontSize={{ base: "xl", md: "4xl" }}
+          fontSize={{ base: "lg", md: "4xl" }}
           mt={4}
           color={colorMode === "light" ? "black" : "white"}
           textAlign="left"
@@ -190,7 +209,7 @@ export const Hero = () => {
           Welcome, I'm
         </Text>
         <Text
-          fontSize={{ base: "2xl", md: "5xl" }}
+          fontSize={{ base: "xl", md: "5xl" }}
           fontWeight="bold"
           color={colorMode === "light" ? "black" : "white"}
           textAlign="left"
@@ -208,7 +227,7 @@ export const Hero = () => {
         </MotionText>
         <Box justifyItems="center">
           <Text
-            fontSize={{ base: "sm", md: "lg" }}
+            fontSize={{ base: "x-small", md: "lg" }}
             mt={8}
             color={colorMode === "light" ? "black" : "white"}
             style={{ textAlign: "justify" }}
@@ -242,8 +261,7 @@ export const Hero = () => {
       </MotionFlex>
       <Flex
         ml={{ base: "5%", lg: "13%" }}
-        mr={"3%"}
-        minW={{ base: "250px", lg: "450px" }}
+        minW={{ base: "200px", lg: "450px" }}
         maxH={"550px"}
       >
         <MotionFlex
@@ -262,7 +280,7 @@ export const Hero = () => {
             objectFit="cover"
             boxShadow="2xl"
             height={"auto"}
-            width={"400px"}
+            width={"370px"}
           />
         </MotionFlex>
       </Flex>
