@@ -179,7 +179,7 @@ export const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         {showLocationAlert && (
-          <Alert status="info" mb={4}>
+          <Alert status="info" mb={4} px={3} py={0}>
             <AlertIcon />
             <AlertDescription
               textAlign={"center"}
@@ -191,9 +191,10 @@ export const Hero = () => {
           </Alert>
         )}
         {showOtherLocationAlert && (
-          <Alert status="warning" mb={4}>
+          <Alert status="warning" mb={4} px={3} py={0} >
             <AlertIcon />
-            <AlertDescription
+            <AlertDescription 
+                        
               color={colorMode === "light" ? "black" : "white"}
               fontSize={{ base: "x-small", md: "md" }}
             >
@@ -218,7 +219,7 @@ export const Hero = () => {
           Gian Felix Ramadan
         </Text>
         <MotionText
-          fontSize={{ base: "xl", md: "3xl" }}
+          fontSize={{ base: "lg", md: "3xl" }}
           opacity={0.8}
           mt={2}
           color={colorMode === "light" ? "black" : "white"}
@@ -226,9 +227,11 @@ export const Hero = () => {
         >
           A {typedText}
         </MotionText>
-        <Box justifyItems="center">
+        <Box justifyItems="center" 
+        // w={{ base: "90%", md: "100%" }}
+        >
           <Text
-            fontSize={{ base: "x-small", md: "lg" }}
+            fontSize={{ base: "xx-small", md: "lg" }}
             mt={8}
             color={colorMode === "light" ? "black" : "white"}
             style={{ textAlign: "justify" }}
@@ -262,7 +265,7 @@ export const Hero = () => {
       </MotionFlex>
       <Flex
         ml={{ base: "5%", lg: "13%" }}
-        minW={{ base: "120px", lg: "450px" }}
+        minW={{ base: "90px", md:"250px", lg: "450px" }}
         maxH={"550px"}
       >
         <MotionFlex

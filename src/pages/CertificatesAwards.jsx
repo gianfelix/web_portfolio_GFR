@@ -36,17 +36,17 @@ const CertificatesAwards = () => {
           Certificates & Awards
         </Heading>
         <Divider mt={4} mb={"25px"} border={"2px"} borderRadius={"full"} w={"75%"} />
-        <Stack spacing={6} maxW={"container.xl"} mb={5}> 
+        <Stack spacing={6} w={{ base: "80%", md: "100%"}} maxW={"container.xl"} mb={5}> 
           <Card bg={isDarkMode ? "blue.900" : "blue.100"}>
             <CardHeader>
-              <Heading size="lg">Remote Pilot Certificate</Heading>
+              <Heading size={{ base: "md", md: "lg"}}>Remote Pilot Certificate</Heading>
             </CardHeader>
-            <CardBody>
-              <Text fontSize="md">
+            <CardBody fontSize={{ base: "sm", md: "md"}}>
+              <Text >
                 Organized By Indonesian Drone Pilots Association (APDI)
               </Text>
-              <Text fontSize="md">Date: June 2022 - June 2024</Text>
-              <Text mt={2}>
+              <Text >Date: June 2022 - June 2024</Text>
+              <Text mt={2} align={"justify"}>
                 The Remote Pilot Certificate held by Asosiasi Pilot Drone
                 Indonesia (APDI) is an official recognition of competence and
                 expertise in operating drones safely and effectively. This
@@ -59,17 +59,17 @@ const CertificatesAwards = () => {
           </Card>
           <Card bg={isDarkMode ? "blue.900" : "blue.100"}>
             <CardHeader>
-              <Heading size="lg">
+              <Heading size={{ base: "md", md: "lg"}}>
                 Presenter at the 33rd National Student Scientific Week (PIMNAS
                 33)
               </Heading>
             </CardHeader>
-            <CardBody>
-              <Text fontSize="md">
+            <CardBody fontSize={{ base: "sm", md: "md"}}>
+              <Text >
                 Organized by the Ministry of Education and Culture
               </Text>
-              <Text fontSize="md">Date: December 2020</Text>
-              <Text mt={2}>
+              <Text >Date: December 2020</Text>
+              <Text mt={2} align={"justify"}>
                 The 33rd National Student Scientific Week (PIMNAS) is a
                 prestigious event in Indonesia that is annually held to
                 accommodate and showcase excellent research results from
@@ -81,16 +81,16 @@ const CertificatesAwards = () => {
           </Card>
           <Card bg={isDarkMode ? "blue.900" : "blue.100"}>
             <CardHeader>
-              <Heading size="lg">
+              <Heading size={{ base: "md", md: "lg"}}>
               Finalist in the 2nd Geoinnovation PetaKita Geospatial Information Agency Competition 
               </Heading>
             </CardHeader>
-            <CardBody>
-              <Text fontSize="md">
+            <CardBody fontSize={{ base: "sm", md: "md"}}>
+              <Text >
                 Organized by by the Geospatial Information Agency (BIG)
               </Text>
-              <Text fontSize="md">Date: October 2019</Text>
-              <Text mt={2}>
+              <Text >Date: October 2019</Text>
+              <Text mt={2} align={"justify"} >
               The 2nd Geoinnovation PetaKita Geospatial Information Agency Competition is a competition held by the Geospatial Information Agency (BIG) to promote the use of geospatial technology in various innovative and impactful ways. The competition serves as a platform for students, researchers, and geospatial enthusiasts to showcase their creativity and problem-solving skills in utilizing geospatial data, tools, and technologies.
               </Text>
             </CardBody>

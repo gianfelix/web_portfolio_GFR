@@ -81,7 +81,7 @@ export const Skills = () => {
             key={skill.title}
             p={5}
             // maxW={"md"}
-            minW={{ base: "450px", md: "600px", xl: "450px" }}
+            minW={{ base: "330px", md: "400px", xl: "450px" }}
             bg={isDarkMode ? "blue.700" : "blue.100"}
             borderRadius="lg"
             boxShadow="md"

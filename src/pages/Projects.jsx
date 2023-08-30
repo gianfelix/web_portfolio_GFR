@@ -99,10 +99,10 @@ export const Projects = () => {
               borderRadius="3xl"
               mb={4}
             />
-            <Heading fontSize="xl" fontWeight="bold" mb={2}>
+            <Heading fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" mb={2}>
               {project.title}
             </Heading>
-            <Text fontSize="md" textAlign="justify">
+            <Text fontSize={{ base: "smaller", md: "md"}} textAlign="justify">
               {showFullDescription[index]
                 ? project.description
                 : project.description.slice(0, 210) + "..."}
@@ -110,6 +110,7 @@ export const Projects = () => {
             {!showFullDescription[index] && (
               <Link
                 display="block"
+                fontSize={{ base: "smaller", md: "md"}}
                 color={isDarkMode ? "blue.300" : "blue.600"}
                 fontWeight="semibold"
                 onClick={() => {
@@ -128,6 +129,7 @@ export const Projects = () => {
                 href={project.demoLink}
                 color={isDarkMode ? "blue.300" : "blue.600"}
                 fontWeight="extrabold"
+                fontSize={{ base: "sm", md: "md"}}
               >
                 Demo / View details
               </Link>
@@ -135,6 +137,7 @@ export const Projects = () => {
                 href={project.githubLink}
                 color={isDarkMode ? "blue.300" : "blue.600"}
                 fontWeight="extrabold"
+                fontSize={{ base: "sm", md: "md"}}
               >
                 GitHub
               </Link>

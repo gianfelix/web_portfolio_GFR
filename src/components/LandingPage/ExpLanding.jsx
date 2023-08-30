@@ -57,10 +57,10 @@ const ExpLanding = () => {
               >
                 2022
               </Text>
-              <Heading size="lg" mb={2}>
+              <Heading size={{ base: "md", md: "lg"}} mb={2}>
                 Individual Consultant, Kantor Wilayah BPN Kalimantan Timur
               </Heading>
-              <UnorderedList pl={2}>
+              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md"}}>
                 <ListItem>
                   Facilitated the Implementation of Agrarian Reform at the
                   Provincial Level.
@@ -92,11 +92,11 @@ const ExpLanding = () => {
               >
                 2021
               </Text>
-              <Heading size="lg" mb={2}>
+              <Heading size={{ base: "md", md: "lg"}} mb={2}>
                 Drone Operator, Enumerator of the Faculty of Forestry,
                 Universitas Gadjah Mada
               </Heading>
-              <UnorderedList pl={2}>
+              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md"}}>
                 <ListItem>
                   Implementing Monitoring of Mangrove Rehabilitation Areas in
                   the Riau Archipelago through Aerial Mapping Using a Multirotor
@@ -122,8 +122,8 @@ const ExpLanding = () => {
               >
                 2021
               </Text>
-              <Heading size="lg" mb={2}>GIS Operator, SinauGIS Consultant</Heading>
-              <UnorderedList pl={2}>
+              <Heading size={{ base: "md", md: "lg"}} mb={2}>GIS Operator, SinauGIS Consultant</Heading>
+              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md"}}>
                 <ListItem>
                   Responsible for extracting geographical features from remote
                   sensing imagery for the preparation of the Banjarasri Village
@@ -141,6 +141,7 @@ const ExpLanding = () => {
             onClick={() => navigate("/experiences")}
             colorScheme={colorMode === "light" ? "blue" : "blue"}
             // color={colorMode === "light" ? "gray.100" : "black"}
+            fontSize={{ base: "md", md: "lg" }}
           >
             Show More My Experiences
           </Button>
