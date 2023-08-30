@@ -10,6 +10,7 @@ import {
   Alert,
   AlertIcon,
   AlertTitle,
+  AlertDescription,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BtnModalContact } from "./BtnModalContact";
@@ -180,24 +181,24 @@ export const Hero = () => {
         {showLocationAlert && (
           <Alert status="info" mb={4}>
             <AlertIcon />
-            <AlertTitle
+            <AlertDescription
               textAlign={"center"}
               color={colorMode === "light" ? "black" : "white"}
-              fontSize={{ base: "sm", md: "md" }}
+              fontSize={{ base: "x-small", md: "md" }}
             >
               Your location: {userLocation}
-            </AlertTitle>
+            </AlertDescription>
           </Alert>
         )}
         {showOtherLocationAlert && (
           <Alert status="warning" mb={4}>
             <AlertIcon />
-            <AlertTitle
+            <AlertDescription
               color={colorMode === "light" ? "black" : "white"}
-              fontSize={{ base: "sm", md: "md" }}
+              fontSize={{ base: "x-small", md: "md" }}
             >
               Your location: {userLocation}
-            </AlertTitle>
+            </AlertDescription>
           </Alert>
         )}
         <Text
@@ -261,7 +262,7 @@ export const Hero = () => {
       </MotionFlex>
       <Flex
         ml={{ base: "5%", lg: "13%" }}
-        minW={{ base: "200px", lg: "450px" }}
+        minW={{ base: "120px", lg: "450px" }}
         maxH={"550px"}
       >
         <MotionFlex
