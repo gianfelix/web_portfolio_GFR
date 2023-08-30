@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Hero } from "../components/LandingPage/Hero";
 import { Skills } from "../components/LandingPage/Skills";
 
@@ -11,9 +11,40 @@ import CertificatesAwards from "./CertificatesAwards";
 import { Projects } from "./Projects";
 
 const LandingPage = () => {
+  const [userLocation, setUserLocation] = useState("");
+
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+      try {
+        // Get user's geolocation using browser's Geolocation API
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Check if user is in Jogja (coordinates are approximate)
+            const isUserInJogja = latitude > -7.80 && latitude < -7.70 &&
+              longitude > 110.30 && longitude < 110.50;
+
+            setUserLocation(isUserInJogja ? "Jogja" : "Other");
+          },
+          (error) => {
+            console.error("Error getting geolocation:", error);
+            setUserLocation("Other");
+          }
+        );
+      } catch (error) {
+        console.error("Geolocation is not supported by this browser.");
+        setUserLocation("Other");
+      }
+    };
+
+    fetchUserLocation();
+  }, []);
+
   return (
     <>
-      <Hero />
+      <Hero userLocation={userLocation}/>
       {/* <Education/> */}
       <Skills />
       <Projects />

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Flex, Text, Image, useColorMode, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, useColorMode, Button, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BtnModalContact } from "./BtnModalContact";
 import CvModal from "./CvModal";
@@ -7,7 +7,7 @@ import CvModal from "./CvModal";
 const MotionFlex = motion(Flex);
 const MotionText = motion(Text);
 
-export const Hero = () => {
+export const Hero = ({userLocation}) => {
   const { colorMode } = useColorMode();
   const isDarkMode = colorMode === "dark";
 
@@ -81,6 +81,7 @@ export const Hero = () => {
       alignItems="center"
       px={"10%"}
     >
+      
       <MotionFlex
         direction="column"
         textAlign="center"
@@ -88,6 +89,14 @@ export const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <Text
+          fontSize={{ base: 'xl', md: '4xl' }}
+          mt={4}
+          color={colorMode === 'light' ? 'black' : 'white'}
+          textAlign="left"
+        >
+          {userLocation === 'Jogja' ? 'Selamat datang anda berada di Jogja!' : 'Anda tidak berada di jogja,'}
+        </Text>
         <Text
           fontSize={{ base: "xl", md: "4xl" }}
           mt={4}
