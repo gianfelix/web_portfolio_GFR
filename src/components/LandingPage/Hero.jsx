@@ -42,7 +42,8 @@ export const Hero = ({ userLocation }) => {
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showAlert, setShowAlert] = useState(false);
+  const [showJogjaAlert, setShowJogjaAlert] = useState(false);
+  const [showOtherAlert, setShowOtherAlert] = useState(false);
 
   useEffect(() => {
     const delay = isDeleting ? 65 : 90;
@@ -80,14 +81,24 @@ export const Hero = ({ userLocation }) => {
 
   useEffect(() => {
     if (userLocation === "Jogja") {
-      setShowAlert(true);
+      setShowJogjaAlert(true);
 
-      const hideAlertTimeout = setTimeout(() => {
-        setShowAlert(false);
-      }, 4000); // Adjust the time here (in milliseconds) for how long you want the alert to be visible
+      const hideJogjaAlertTimeout = setTimeout(() => {
+        setShowJogjaAlert(false);
+      }, 4000);
 
       return () => {
-        clearTimeout(hideAlertTimeout);
+        clearTimeout(hideJogjaAlertTimeout);
+      };
+    } else if (userLocation === "Other") {
+      setShowOtherAlert(true);
+
+      const hideOtherAlertTimeout = setTimeout(() => {
+        setShowOtherAlert(false);
+      }, 6400);
+
+      return () => {
+        clearTimeout(hideOtherAlertTimeout);
       };
     }
   }, [userLocation]);
@@ -114,11 +125,19 @@ export const Hero = ({ userLocation }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {showAlert && (
+        {showJogjaAlert && (
           <Alert status="info" mb={4}>
             <AlertIcon />
             <AlertTitle color={colorMode === "light" ? "black" : "white"}>
-              Selamat datang, Anda berada di Jogja!
+              You are in Yogyakarta!
+            </AlertTitle>
+          </Alert>
+        )}
+        {showOtherAlert && (
+          <Alert status="warning" mb={4}>
+            <AlertIcon />
+            <AlertTitle color={colorMode === "light" ? "black" : "white"}>
+              You are not in Yogyakarta!
             </AlertTitle>
           </Alert>
         )}
