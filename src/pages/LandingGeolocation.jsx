@@ -34,23 +34,15 @@ const LandingGeolocation = () => {
     userLocation.latitude <= -7.543457 &&
     userLocation.longitude >= 110.011482 &&
     userLocation.longitude <= 110.843268;
-    
+
   const inJawaTimur =
-  userLocation.latitude >= -8.307721 &&
-  userLocation.latitude <= -6.687675 &&
-  userLocation.longitude >= 111.041809 &&
-  userLocation.longitude <= 114.520890;
+    userLocation.latitude >= -8.307721 &&
+    userLocation.latitude <= -6.687675 &&
+    userLocation.longitude >= 111.041809 &&
+    userLocation.longitude <= 114.52089;
 
   return (
     <>
-      <Box>
-        <Text>Your Coordinate Location:</Text>
-        <Text>Latitude: {userLocation.latitude}</Text>
-        <Text>Longitude: {userLocation.longitude}</Text>
-        <Text>
-          Coordinat: {userLocation.latitude}, {userLocation.longitude}
-        </Text>
-      </Box>
       {inYogjakarta ? (
         <LandingTokoYog />
       ) : inJawaTimur ? (
@@ -58,6 +50,17 @@ const LandingGeolocation = () => {
       ) : (
         <LandingTidakJangkau />
       )}
+
+      <Box mt={5} display={"flex"} justifyContent={"center"}>
+        <Box>
+          <Text>For Check Your Coordinate Location</Text>
+          <Text>Latitude: {userLocation.latitude}</Text>
+          <Text>Longitude: {userLocation.longitude}</Text>
+          <Text>
+            Coordinat: {userLocation.latitude}, {userLocation.longitude}
+          </Text>
+        </Box>
+      </Box>
     </>
   );
 };
