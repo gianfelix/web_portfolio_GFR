@@ -30,15 +30,16 @@ const LandingGeolocation = () => {
   }
 
   const inYogjakarta =
-    userLocation.latitude >= -8.03 &&
-    userLocation.latitude <= -7.65 &&
-    userLocation.longitude >= 110.0 &&
-    userLocation.longitude <= 110.5;
-  const inSurabaya =
-  userLocation.latitude >= -8.6 &&
-  userLocation.latitude <= -5.85 &&
-  userLocation.longitude >= 110.1 &&
-  userLocation.longitude <= 114.8;
+    userLocation.latitude >= -8.206338 &&
+    userLocation.latitude <= -7.543457 &&
+    userLocation.longitude >= 110.011482 &&
+    userLocation.longitude <= 110.843268;
+    
+  const inJawaTimur =
+  userLocation.latitude >= -8.307721 &&
+  userLocation.latitude <= -6.687675 &&
+  userLocation.longitude >= 111.041809 &&
+  userLocation.longitude <= 114.520890;
 
   return (
     <>
@@ -52,7 +53,7 @@ const LandingGeolocation = () => {
       </Box>
       {inYogjakarta ? (
         <LandingTokoYog />
-      ) : inSurabaya ? (
+      ) : inJawaTimur ? (
         <LandingTokoSby />
       ) : (
         <LandingTidakJangkau />
