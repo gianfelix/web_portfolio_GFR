@@ -43,11 +43,11 @@ export const Projects = () => {
         "https://github.com/gianfelix/Front-End_JCWD_Purwadhika/tree/mini-project",
     },
     {
-      title: "Cashier Application - Caishen App",
+      title: "Cashier Application - Cashien App",
       imageSrc: "cashierapp1.jpg",
       description:
-        "Caishen App is a cashier app designed specifically for use in restaurants. The app presents a complete list of food products offered by the restaurant. The main purpose of this app is to simplify the transaction process for cashiers and help admins or restaurant owners manage their products. With an intuitive interface, Caishen App allows cashiers to easily perform sales transactions, while admins can manage product inventory more efficiently.",
-      demoLink: "https://example.com/caishen",
+        "Cashien App is a cashier app designed specifically for use in restaurants. The app presents a complete list of food products offered by the restaurant. The main purpose of this app is to simplify the transaction process for cashiers and help admins or restaurant owners manage their products. With an intuitive interface, Cashien App allows cashiers to easily perform sales transactions, while admins can manage product inventory more efficiently.",
+      demoLink: "https://example.com/Cashien",
       githubLink: "https://github.com/gifariarsal/group1",
     },
     {
@@ -71,6 +71,50 @@ export const Projects = () => {
       githubLink:
         "https://github.com/gianfelix/mypublication/blob/main/ProceedingsofSPIE_Analysis%20Spatial%20Pattern%20of%20Urban%20Growth%20Using%20Remote%20Sensing%20Data%20a%20Study%20in%20Purwokerto%2C%20Central%20Java%2C%20Indonesia.pdf",
     },
+    {
+      title:
+        "Attendance App",
+      imageSrc: "attendance-app.jpg",
+      description:
+        "(For demo, u can use email: 123456@email.com and password: Qwe123#). An attendance app is an application designed to record the clock in and clock out times of employees in a company. This application is used for both morning shift and night shift employees. The app enables a company to efficiently and accurately track employee attendance and manage attendance data. This project is part of a mini project organized by Bootcamp Purwadhika." ,
+      demoLink:
+        "https://attendance-app-felix.netlify.app/",
+      githubLink:
+        "https://github.com/gianfelix/select_test_pwd_FE",
+    },
+    {
+      title:
+        "Analysis of Affordability of Health Facilities using Network Analysis Modeling in Yogyakarta City",
+      imageSrc: "journal3.jpg",
+      description:
+        "High population density in Yogyakarta City must be balanced with infrastructure services including affordability to health facilities. The aim of this research is to (1) model the level of affordability of health facilities based on radius and travel time using network analysis, and (2) determine the percentage of reachability of health facilities for each village in Yogyakarta City. The method used is network analysis and data overlay with tiered quantitative weighting.",
+      demoLink:
+        "https://www.researchgate.net/publication/351312864_ANALISIS_KETERJANGKAUAN_FASILITAS_KESEHATAN_MENGGUNAKAN_PEMODELAN_NETWORK_ANALYSIS_DI_KOTA_YOGYAKARTA",
+      githubLink:
+        "https://github.com/gianfelix/mypublication/blob/main/Analysis%20of%20Affordability%20of%20Health%20Facilities%20using%20Network%20Analysis%20Modeling%20in%20Yogyakarta_Gian%20Felix%20Ramadan.pdf",
+    },
+    {
+      title:
+        "Analysis of Urban Comfort Level in Java Island Based on Air Temperatur and Air Quality in 2015 – 2019",
+      imageSrc: "journal4.jpg",
+      description:
+        "The island of Java as the center of activity in Indonesia is experiencing uncontrolled urbanization and industrialization. Urbanization and industrialization are sources of air pollution and increases in air temperature, which can increase the risk of health problems for humans and reduce the comfort level of the city. This study focuses on assessing the comfort level of cities in Java based on the relationship between temperature and air quality human health levels in 2015 to 2019, in 10 cities, namely Jakarta, Bandung, Surabaya, Semarang, Tasikmalaya, Malang, Surakarta, Yogyakarta, Cilegon, and Tegal. ",
+      demoLink:
+        "https://ejournal.upi.edu/index.php/gea/article/view/44462",
+      githubLink:
+        "https://github.com/gianfelix/mypublication/blob/main/Analysis%20of%20Urban%20Comfort%20Level%20in%20Java%20Island%20Based%20on%20Air%20Temperatur%20and%20Air%20Quality%20in%202015%20%E2%80%93%202019_Gian%20Felix%20R.pdf",
+    },
+    {
+      title:
+        "Geolocation Landing Page",
+      imageSrc: "geolocation-lp.jpg",
+      description:
+        "Geolocation Landing Page is a Landing Page based on the user's origin location using GPS and taking user location data. This landing page is built using HTML, CSS, Chakra UI, React JS, and Javascript. Users will be directed to the Shop Landing Page in D. I. Yogyakarta or the Store Landing Page in East Java if they are in that location. If you are not in these two locations, an unreachable area will appear.",
+      demoLink:
+        "https://geolocation-landing.netlify.app/",
+      githubLink:
+        "https://github.com/gianfelix/geolocation_landingpage",
+    },
     // Add more projects as needed
   ];
 
@@ -81,7 +125,7 @@ export const Projects = () => {
       </Heading>
       <SimpleGrid
         columns={{ base: 1, md: 2, xl: 4 }}
-        spacing={4}
+        spacing={6}
         justifyItems="center"
       >
         {projectsData.map((project, index) => (
@@ -90,19 +134,33 @@ export const Projects = () => {
             bg={isDarkMode ? "blue.700" : "blue.100"}
             borderRadius="3xl"
             boxShadow="md"
-            p={5}
+            p={6}
+            _hover={{
+              borderWidth: "2px",
+              borderColor: isDarkMode ? "blue.200" : "blue.600",
+              bg: isDarkMode ? "blue.800" : "blue.200",
+              color: isDarkMode ? "blue.200" : "blue.800",
+            }}
           >
-            <Image
-              src={project.imageSrc}
-              alt={`Project ${index + 1}`}
-              objectFit="cover"
-              borderRadius="3xl"
-              mb={4}
-            />
-            <Heading fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" mb={2}>
+            <Box align={"center"}>
+              <Image
+                src={project.imageSrc}
+                alt={`Project ${index + 1}`}
+                objectFit="cover"
+                borderRadius="3xl"
+                mb={4}
+                maxH={"250px"}
+                
+              />
+            </Box>
+            <Heading
+              fontSize={{ base: "md", md: "lg" }}
+              fontWeight="bold"
+              mb={2}
+            >
               {project.title}
             </Heading>
-            <Text fontSize={{ base: "smaller", md: "md"}} textAlign="justify">
+            <Text fontSize={{ base: "smaller", md: "sm" }} textAlign="justify">
               {showFullDescription[index]
                 ? project.description
                 : project.description.slice(0, 210) + "..."}
@@ -110,7 +168,7 @@ export const Projects = () => {
             {!showFullDescription[index] && (
               <Link
                 display="block"
-                fontSize={{ base: "smaller", md: "md"}}
+                fontSize={{ base: "smaller", md: "md" }}
                 color={isDarkMode ? "blue.300" : "blue.600"}
                 fontWeight="semibold"
                 onClick={() => {
@@ -129,7 +187,7 @@ export const Projects = () => {
                 href={project.demoLink}
                 color={isDarkMode ? "blue.300" : "blue.600"}
                 fontWeight="extrabold"
-                fontSize={{ base: "sm", md: "md"}}
+                fontSize={{ base: "sm", md: "md" }}
               >
                 Demo / View details
               </Link>
@@ -137,7 +195,7 @@ export const Projects = () => {
                 href={project.githubLink}
                 color={isDarkMode ? "blue.300" : "blue.600"}
                 fontWeight="extrabold"
-                fontSize={{ base: "sm", md: "md"}}
+                fontSize={{ base: "sm", md: "md" }}
               >
                 GitHub
               </Link>

@@ -35,20 +35,31 @@ const ExpLanding = () => {
   }
 
   return (
-    <Box p={4} bg={isDarkmode ? "gray.800" : "white"} align={"center"}>
-      <Box minW={"65%"} maxW={"70%"} align={"left"}>
-        <Flex direction="column" align="center" mt={8}>
+    <Box p={4} bgGradient={isDarkmode ? "linear(to-b, gray.800, blue.900)" : "linear(to-b, white, blue.300)"} align={"center"} pb={8}>
+      <Box
+        minW={"65%"}
+        maxW={"70%"}
+        align={"left"}
+        
+      >
+        <Flex direction="column" align="center" mt={8} >
           <Heading size="xl" mb={5} color={isDarkmode ? "white" : "black"}>
             Experience
           </Heading>
 
-          <Stack spacing={8}>
+          <Stack spacing={8} >
             {/* Experience Entry 1 */}
             <Box
               p={6}
               bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="md"
+              borderRadius="xl"
               boxShadow={"md"}
+              border={"1px"}
+              borderColor={isDarkmode ? "white" : "blue.300"}
+              _hover={{
+                transform: "translateY(-5px)",
+                bg: isDarkmode ? "blue.800" : "blue.200",
+              }}
             >
               <Text
                 fontSize="xl"
@@ -57,10 +68,10 @@ const ExpLanding = () => {
               >
                 2022
               </Text>
-              <Heading size={{ base: "md", md: "lg"}} mb={2}>
+              <Heading size={{ base: "md", md: "lg" }} mb={2}>
                 Individual Consultant, Kantor Wilayah BPN Kalimantan Timur
               </Heading>
-              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md"}}>
+              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md" }}>
                 <ListItem>
                   Facilitated the Implementation of Agrarian Reform at the
                   Provincial Level.
@@ -82,8 +93,14 @@ const ExpLanding = () => {
             <Box
               p={6}
               bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="md"
+              borderRadius="xl"
               boxShadow={"md"}
+              border={"1px"}
+              borderColor={isDarkmode ? "white" : "blue.300"}
+              _hover={{
+                transform: "translateY(-5px)",
+                bg: isDarkmode ? "blue.800" : "blue.200",
+              }}
             >
               <Text
                 fontSize="xl"
@@ -92,11 +109,11 @@ const ExpLanding = () => {
               >
                 2021
               </Text>
-              <Heading size={{ base: "md", md: "lg"}} mb={2}>
+              <Heading size={{ base: "md", md: "lg" }} mb={2}>
                 Drone Operator, Enumerator of the Faculty of Forestry,
                 Universitas Gadjah Mada
               </Heading>
-              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md"}}>
+              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md" }}>
                 <ListItem>
                   Implementing Monitoring of Mangrove Rehabilitation Areas in
                   the Riau Archipelago through Aerial Mapping Using a Multirotor
@@ -112,8 +129,14 @@ const ExpLanding = () => {
             <Box
               p={6}
               bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="md"
+              borderRadius="xl"
               boxShadow={"md"}
+              border={"1px"}
+              borderColor={isDarkmode ? "white" : "blue.300"}
+              _hover={{
+                transform: "translateY(-5px)",
+                bg: isDarkmode ? "blue.800" : "blue.200",
+              }}
             >
               <Text
                 fontSize="xl"
@@ -122,8 +145,10 @@ const ExpLanding = () => {
               >
                 2021
               </Text>
-              <Heading size={{ base: "md", md: "lg"}} mb={2}>GIS Operator, SinauGIS Consultant</Heading>
-              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md"}}>
+              <Heading size={{ base: "md", md: "lg" }} mb={2}>
+                GIS Operator, SinauGIS Consultant
+              </Heading>
+              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md" }}>
                 <ListItem>
                   Responsible for extracting geographical features from remote
                   sensing imagery for the preparation of the Banjarasri Village

@@ -91,6 +91,7 @@ export const Skills = () => {
             _hover={{
               transform: "translateY(-5px)",
               bg: isDarkMode ? "blue.800" : "blue.200",
+              color: isDarkMode ? "blue.200" : "blue.800",
             }}
           >
             <Box

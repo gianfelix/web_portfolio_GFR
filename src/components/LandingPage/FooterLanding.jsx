@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/react";
-import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaLinkedin, FaGit, FaGithub } from "react-icons/fa";
 
 const FooterLanding = () => {
   const { colorMode } = useColorMode();
@@ -12,13 +12,13 @@ const FooterLanding = () => {
           Felix's Portfolio
         </Text>
         <Flex>
-          <Link mx={2} href="#">
-            <Icon as={FaTwitter} boxSize={6} />
+          <Link mx={2} href="https://github.com/gianfelix">
+            <Icon as={FaGithub} boxSize={6} />
           </Link>
-          <Link mx={2} href="#">
+          <Link mx={2} href="https://www.instagram.com/gianfelixr/">
             <Icon as={FaInstagram} boxSize={6} />
           </Link>
-          <Link mx={2} href="#">
+          <Link mx={2} href="https://www.linkedin.com/in/gianfelixramadan/">
             <Icon as={FaLinkedin} boxSize={6} />
           </Link>
         </Flex>
