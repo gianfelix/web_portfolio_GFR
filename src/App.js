@@ -15,6 +15,7 @@ import Experience from "./pages/Experience";
 import CertificatesAwards from "./pages/CertificatesAwards";
 import { Projects } from "./pages/Projects";
 import LandingGeolocation from "./pages/LandingGeolocation";
+import MapComponent from "./pages/MapComponent";
 
 const theme = extendTheme({
   // Atur tema Chakra UI sesuai preferensi Anda
@@ -60,6 +61,7 @@ function App() {
           <Route path="/certificates" element={<CertificatesAwards />} />
 
           <Route path="/location" element={<LandingGeolocation />} />
+          <Route path="/web" element={<MapComponent />} />
         </Routes>
       </ChakraProvider>
     </>
