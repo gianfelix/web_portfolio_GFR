@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardBody,
   useColorMode,
+  Image,
 } from "@chakra-ui/react";
 
 const CertificatesAwards = () => {

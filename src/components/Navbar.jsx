@@ -36,7 +36,6 @@ const Navbar = () => {
     >
       <Flex p={4} align="center" justifyContent="space-between">
         <HStack spacing={4} align="center">
-
           {/* Hamburger Menu  */}
 
           <Menu>
@@ -46,7 +45,6 @@ const Navbar = () => {
               variant="outline"
               color={colorMode === "light" ? "gray.600" : "white"}
               display={{ base: "block", md: "none" }}
-              
             />
             <MenuList zIndex={20} boxShadow={"md"}>
               <MenuItem
@@ -61,7 +59,7 @@ const Navbar = () => {
               >
                 About
               </MenuItem>
-              
+
               <Menu>
                 <MenuButton
                   as={IconButton}
@@ -144,13 +142,19 @@ const Navbar = () => {
                     onClick={() => navigate("/webgis")}
                     _hover={{ bg: "brand.300" }}
                   >
-                    WebGIS-1
+                    Admin Yogyakarta City
                   </MenuItem>
                   <MenuItem
                     onClick={() => navigate("/webgis-2")}
                     _hover={{ bg: "brand.300" }}
                   >
-                    WebGIS-2
+                    Admin Regency/City in Indonesia
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => navigate("/webgis-3")}
+                    _hover={{ bg: "brand.300" }}
+                  >
+                    Affordability of Health Facilities
                   </MenuItem>
                 </MenuList>
               </Menu>
@@ -205,9 +209,7 @@ const Navbar = () => {
           >
             About
           </Box>
-          <Box
-            
-          >
+          <Box>
             <NavbarExpProj />
           </Box>
           <Box

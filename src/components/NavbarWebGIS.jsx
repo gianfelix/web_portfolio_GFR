@@ -24,8 +24,9 @@ export const NavbarWebGIS = () => {
           WebGIS
         </MenuButton>
         <MenuList zIndex={3}>
-          <MenuItem onClick={() => navigate("/webgis")}>WebGIS-1</MenuItem>
-          <MenuItem onClick={() => navigate("/webgis-2")}>WebGIS-2</MenuItem>
+          <MenuItem onClick={() => navigate("/webgis")}>Admin Yogyakarta City</MenuItem>
+          <MenuItem onClick={() => navigate("/webgis-2")}>Admin Regency/City in Indonesia</MenuItem>
+          <MenuItem onClick={() => navigate("/webgis-3")}>Affordability of Health Facilities</MenuItem>
         </MenuList>
       </Menu>
     </Box>

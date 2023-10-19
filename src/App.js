@@ -16,6 +16,7 @@ import CertificatesAwards from "./pages/CertificatesAwards";
 import { Projects } from "./pages/Projects";
 import LandingGeolocation from "./pages/LandingGeolocation";
 import MapComponent from "./pages/MapComponent";
+import WebGIS3 from "./components/WebGIS/WebGIS3";
 
 const theme = extendTheme({
   // Atur tema Chakra UI sesuai preferensi Anda
@@ -56,6 +57,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/webgis" element={<WebGIS />} />
           <Route path="/webgis-2" element={<WebGIS2 />} />
+          <Route path="/webgis-3" element={<WebGIS3 />} />
           <Route path="/experiences" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certificates" element={<CertificatesAwards />} />
