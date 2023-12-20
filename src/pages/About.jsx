@@ -45,7 +45,12 @@ const About = () => {
           boxSize="30%"
           rounded="full" 
           alt="Gian Felix Ramadan" 
-          src="/fotoku1.jpg"/>
+          src="/fotoku1.jpg"
+            _hover={{
+              transform: "scale(1.1)",
+            }}
+            transition="transform 0.2s ease-in-out"
+          />
           <Heading mt={4} mb={2} textAlign="center" fontSize="3xl">
             About Me
           </Heading>

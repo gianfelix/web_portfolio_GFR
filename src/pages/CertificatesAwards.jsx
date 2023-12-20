@@ -33,7 +33,12 @@ const CertificatesAwards = () => {
   return (
     <Box p={3}>
       <Flex direction="column" align="center" mt={8}>
-        <Heading size="xl" color={isDarkMode ? "white" : "black"}>
+        <Heading size="xl" color={isDarkMode ? "white" : "black"}
+        _hover={{
+          transform: "scale(1.1)",
+        }}
+        transition={"transform 0.3s ease-in-out"}
+        >
           Certificates & Awards
         </Heading>
         <Divider

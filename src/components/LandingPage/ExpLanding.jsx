@@ -43,7 +43,12 @@ const ExpLanding = () => {
         
       >
         <Flex direction="column" align="center" mt={8} >
-          <Heading size="xl" mb={5} color={isDarkmode ? "white" : "black"}>
+          <Heading size="xl" mb={5} color={isDarkmode ? "white" : "black"}
+          _hover={{
+            transform: "scale(1.1)",
+          }}
+          transition={"transform 0.3s ease-in-out"}
+          >
             Experience
           </Heading>
 
@@ -60,6 +65,7 @@ const ExpLanding = () => {
                 transform: "translateY(-5px)",
                 bg: isDarkmode ? "blue.800" : "blue.200",
               }}
+              transition={"all 0.3s ease"}
             >
               <Text
                 fontSize="xl"
@@ -101,6 +107,7 @@ const ExpLanding = () => {
                 transform: "translateY(-5px)",
                 bg: isDarkmode ? "blue.800" : "blue.200",
               }}
+              transition={"all 0.3s ease"}
             >
               <Text
                 fontSize="xl"
@@ -137,6 +144,7 @@ const ExpLanding = () => {
                 transform: "translateY(-5px)",
                 bg: isDarkmode ? "blue.800" : "blue.200",
               }}
+              transition={"all 0.3s ease"}
             >
               <Text
                 fontSize="xl"

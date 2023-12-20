@@ -120,7 +120,12 @@ export const Projects = () => {
 
   return (
     <Box p={8} bg={isDarkMode ? "gray.800" : "white"}>
-      <Heading fontSize="4xl" mb={4} textAlign="center">
+      <Heading fontSize="4xl" mb={4} textAlign="center"
+      _hover={{
+        transform: " scale(1.1)",
+      }}
+      transition={"all 0.3s ease"}
+      >
         Projects
       </Heading>
       <SimpleGrid

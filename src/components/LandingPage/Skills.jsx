@@ -64,6 +64,9 @@ export const Skills = () => {
           color={isDarkMode ? "white" : "black"}
           letterSpacing="wide"
           textTransform="uppercase"
+          _hover={{ transform: " scale(1.1)" }}
+          transition={"all 0.3s ease"}
+         
         >
           MY SKILLS
         </Text>
@@ -93,6 +96,7 @@ export const Skills = () => {
               bg: isDarkMode ? "blue.800" : "blue.200",
               color: isDarkMode ? "blue.200" : "blue.800",
             }}
+            transition={"all 0.3s ease"}
           >
             <Box
               as={skill.icon}
