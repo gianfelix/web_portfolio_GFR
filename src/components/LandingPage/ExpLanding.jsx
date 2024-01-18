@@ -35,24 +35,69 @@ const ExpLanding = () => {
   }
 
   return (
-    <Box p={4} bgGradient={isDarkmode ? "linear(to-b, gray.800, blue.900)" : "linear(to-b, white, blue.300)"} align={"center"} pb={8}>
-      <Box
-        minW={"65%"}
-        maxW={"70%"}
-        align={"left"}
-        
-      >
-        <Flex direction="column" align="center" mt={8} >
-          <Heading size="xl" mb={5} color={isDarkmode ? "white" : "black"}
-          _hover={{
-            transform: "scale(1.1)",
-          }}
-          transition={"transform 0.3s ease-in-out"}
+    <Box
+      p={4}
+      bgGradient={
+        isDarkmode
+          ? "linear(to-b, gray.800, blue.900)"
+          : "linear(to-b, white, blue.300)"
+      }
+      align={"center"}
+      pb={8}
+    >
+      <Box minW={"65%"} maxW={"70%"} align={"left"}>
+        <Flex direction="column" align="center" mt={8}>
+          <Heading
+            size="xl"
+            mb={5}
+            color={isDarkmode ? "white" : "black"}
+            _hover={{
+              transform: "scale(1.1)",
+            }}
+            transition={"transform 0.3s ease-in-out"}
           >
             Experience
           </Heading>
 
-          <Stack spacing={8} >
+          <Stack spacing={8}>
+            {/* Experience Entry 0 */}
+            <Box
+              p={6}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="xl"
+              boxShadow={"md"}
+              border={"1px"}
+              borderColor={isDarkmode ? "white" : "blue.300"}
+              _hover={{
+                transform: "translateY(-5px)",
+                bg: isDarkmode ? "blue.800" : "blue.200",
+              }}
+              transition={"all 0.3s ease"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
+                2023
+              </Text>
+              <Heading size="lg" mb={2}>
+                GIS Specialist, Carbon Ethics
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Build and organize geodatabase of required spatial data
+                </ListItem>
+                <ListItem>
+                  Analyze spatial data related to ecosystem rehabilitation
+                </ListItem>
+                <ListItem>
+                  Support the implementation of ecosystem rehabilitation in
+                  reducing carbon emissions in the field of GIS
+                </ListItem>
+              </UnorderedList>
+            </Box>
+
             {/* Experience Entry 1 */}
             <Box
               p={6}

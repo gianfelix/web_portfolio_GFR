@@ -40,6 +40,37 @@ const Experience = () => {
           </Heading>
 
           <Stack spacing={8}>
+            {/* Experience Entry 0 */}
+            <Box
+              p={7}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="md"
+              boxShadow={"md"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
+                2023
+              </Text>
+              <Heading size="lg" mb={2}>
+                GIS Specialist, Carbon Ethics
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Build and organize geodatabase of required spatial data
+                </ListItem>
+                <ListItem>
+                  Analyze spatial data related to ecosystem rehabilitation
+                </ListItem>
+                <ListItem>
+                  Support the implementation of ecosystem rehabilitation in
+                  reducing carbon emissions in the field of GIS
+                </ListItem>
+              </UnorderedList>
+            </Box>
+
             {/* Experience Entry 1 */}
             <Box
               p={7}
@@ -144,7 +175,9 @@ const Experience = () => {
               >
                 2021
               </Text>
-              <Heading size="lg" mb={2}>GIS Operator, SinauGIS Consultant</Heading>
+              <Heading size="lg" mb={2}>
+                GIS Operator, SinauGIS Consultant
+              </Heading>
               <UnorderedList pl={2}>
                 <ListItem>
                   Responsible for extracting geographical features from remote
