@@ -48,7 +48,7 @@ function App() {
     <>
       <ChakraProvider theme={theme}>
         <CSSReset />
-        <Box mb={"72px"}>
+        <Box mb={"60px"}>
           <Navbar />
         </Box>
 
