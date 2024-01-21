@@ -34,7 +34,16 @@ export const Projects = () => {
 
   const projectsData = [
     {
-      title: "Blogging Website - Earh Wall",
+      title: "WebGIS - SINTARA HALTENG KAB",
+      imageSrc: "sintara_LP.png",
+      description:
+        "SINTARA is a digital map-based Central Halmahera Regency Infrastructure and Spatial Information System. SINTARA is built based on participatory principles in mutual cooperation in the implementation and supervision of orderly development in Central Halmahera Regency.",
+      demoLink: "https://sintara.haltengkab.go.id/peta",
+      githubLink:
+        "https://github.com/SinauGIS/halmahera-tengah-2023",
+    },
+    {
+      title: "Blogging Website - Earth Wall",
       imageSrc: "blogging.jpg",
       description:
         "Blogging website called Earth Wall is a blog for sharing knowledge, articles, and opinions with anyone about everything that exists on our earth. Through this blog you can read, write, and expand your world for everyone. This project is part of a mini project organized by Bootcamp Purwadhika.",
@@ -104,17 +113,17 @@ export const Projects = () => {
       githubLink:
         "https://github.com/gianfelix/mypublication/blob/main/Analysis%20of%20Urban%20Comfort%20Level%20in%20Java%20Island%20Based%20on%20Air%20Temperatur%20and%20Air%20Quality%20in%202015%20%E2%80%93%202019_Gian%20Felix%20R.pdf",
     },
-    {
-      title:
-        "Geolocation Landing Page",
-      imageSrc: "geolocation-lp.jpg",
-      description:
-        "Geolocation Landing Page is a Landing Page based on the user's origin location using GPS and taking user location data. This landing page is built using HTML, CSS, Chakra UI, React JS, and Javascript. Users will be directed to the Shop Landing Page in D. I. Yogyakarta or the Store Landing Page in East Java if they are in that location. If you are not in these two locations, an unreachable area will appear.",
-      demoLink:
-        "https://geolocation-landing.netlify.app/",
-      githubLink:
-        "https://github.com/gianfelix/geolocation_landingpage",
-    },
+    // {
+    //   title:
+    //     "Geolocation Landing Page",
+    //   imageSrc: "geolocation-lp.jpg",
+    //   description:
+    //     "Geolocation Landing Page is a Landing Page based on the user's origin location using GPS and taking user location data. This landing page is built using HTML, CSS, Chakra UI, React JS, and Javascript. Users will be directed to the Shop Landing Page in D. I. Yogyakarta or the Store Landing Page in East Java if they are in that location. If you are not in these two locations, an unreachable area will appear.",
+    //   demoLink:
+    //     "https://geolocation-landing.netlify.app/",
+    //   githubLink:
+    //     "https://github.com/gianfelix/geolocation_landingpage",
+    // },
     // Add more projects as needed
   ];
 
