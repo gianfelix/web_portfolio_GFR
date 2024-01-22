@@ -17,7 +17,7 @@ const generateRandomValue = () => {
 const generateRandomBarcode = () => {
   // Implement your logic to generate a random barcode value here
   // For simplicity, let's generate a random 12-digit numeric barcode
-  const barcodeValue = Math.floor(Math.random() * 900000000000) + 100000000000;
+  const barcodeValue = Math.floor(Math.random() * 900000000000) + 100000000000 ;
   return barcodeValue.toString();
 };
 
@@ -33,7 +33,7 @@ const BarcodeGenerator = () => {
         <Text> Scan the barcode! </Text>
       </>
 
-      <Box mt={10}>
+      <Box mt={100}>
         <h2>Random QR Code Generator</h2>
         <QRCode value={qrCodeValue} />
         {/* <p>QR Code Value: {qrCodeValue}</p> */}

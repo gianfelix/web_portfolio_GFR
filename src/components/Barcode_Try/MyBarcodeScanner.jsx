@@ -1,23 +1,32 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useZxing } from "react-zxing";
+import { useParams } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
 
 const MyBarcodeScanner = () => {
-  const [result, setResult] = useState("");
+  const [scan, setScan] = useState(null);
+  const { deviceId } = useParams();
+
   const { ref } = useZxing({
-    onDecodeResult(result) {
-      setResult(result.getText());
+    onResult: (newScan) => {
+      setScan(newScan);
     },
+    deviceId,
   });
 
   return (
-    <>
-      <video ref={ref} />
-      <p>
-        <span>Last result:</span>
-        <span>{result}</span>
-      </p>
-    </>
+    <Box pt={10} px={150}>
+      <h2>Barcode Scanner</h2>
+      <video width="300" ref={ref} />
+
+      {scan && (
+        <Box mt={4}>
+          <p>
+            <strong>Scanned Data:</strong> {scan}
+          </p>
+        </Box>
+      )}
+    </Box>
   );
 };
 
