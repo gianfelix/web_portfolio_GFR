@@ -156,6 +156,12 @@ const Navbar = () => {
                   >
                     Affordability of Health Facilities
                   </MenuItem>
+                  <MenuItem
+                    onClick={() => navigate("/webgis-4")}
+                    _hover={{ bg: "brand.300" }}
+                  >
+                    Deforestation in Indonesia 2017-2023
+                  </MenuItem>
                 </MenuList>
               </Menu>
             </MenuList>
