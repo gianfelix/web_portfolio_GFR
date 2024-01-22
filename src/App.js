@@ -18,6 +18,8 @@ import LandingGeolocation from "./pages/LandingGeolocation";
 import MapComponent from "./pages/MapComponent";
 import WebGIS3 from "./components/WebGIS/WebGIS3";
 import GEE_app from "./components/WebGIS/GEE_app";
+import BarcodeGenerator from "./components/Barcode_Try/BarcodeGenerator";
+import MyBarcodeScanner from "./components/Barcode_Try/MyBarcodeScanner";
 
 const theme = extendTheme({
   // Atur tema Chakra UI sesuai preferensi Anda
@@ -65,6 +67,8 @@ function App() {
           <Route path="/certificates" element={<CertificatesAwards />} />
           <Route path="/location" element={<LandingGeolocation />} />
           <Route path="/web" element={<MapComponent />} />
+          <Route path="/barcode" element={<BarcodeGenerator />} />
+          <Route path="/scan" element={<MyBarcodeScanner/>} />
         </Routes>
       </ChakraProvider>
     </>
