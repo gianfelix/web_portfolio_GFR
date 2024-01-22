@@ -15,9 +15,9 @@ const MyBarcodeScanner = () => {
   });
 
   return (
-    <Box pt={10} px={150}>
+    <Box pt={10} px={10}>
       <h2>Barcode Scanner</h2>
-      <video width="300" ref={ref} />
+      <video width="700" ref={ref} />
 
       {scan && (
         <Box mt={4}>
