@@ -47,7 +47,8 @@ export const Hero = () => {
   };
 
   const textOptions = [
-    "GIS Analyst and Spatial Programmer   ",
+    "GIS Specialist     ",
+    "Spatial Progammer     ",
     "Web Developer     ",
   ];
   const [textIndex, setTextIndex] = useState(0);
@@ -61,7 +62,7 @@ export const Hero = () => {
   const [showOtherLocationAlert, setShowOtherLocationAlert] = useState(false);
 
   useEffect(() => {
-    const delay = isDeleting ? 65 : 90;
+    const delay = isDeleting ? 30 : 65;
     const nextIndex = isDeleting ? currentIndex - 1 : currentIndex + 1;
 
     if (nextIndex <= currentText.length && nextIndex >= 0) {
@@ -216,7 +217,7 @@ export const Hero = () => {
           color={colorMode === "light" ? "black" : "white"}
           textAlign="left"
         >
-          Gian Felix Ramadan
+          Gian Felix Ramadan, S.Si.
         </Text>
         <MotionText
           fontSize={{ base: "lg", md: "3xl" }}

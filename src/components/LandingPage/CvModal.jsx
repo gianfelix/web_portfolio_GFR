@@ -8,13 +8,14 @@ import {
   Button,
 } from "@chakra-ui/react";
 
+
 const CvModal = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="6xl">
       <ModalOverlay />
       <ModalContent>
         <ModalBody>
-          <embed src="/CV_GianFelixRamadan.pdf" width="100%" height="700vh" />
+          <embed src="/CV_ID_GIANFELIXRAMADAN_2024.pdf" width="100%" height="700vh" />
         </ModalBody>
         <ModalFooter>
           <Button
@@ -30,8 +31,8 @@ const CvModal = ({ isOpen, onClose }) => {
             colorScheme="brand"
             onClick={() => {
               const downloadLink = document.createElement("a");
-              downloadLink.href = "/CV_GianFelixRamadan.pdf";
-              downloadLink.download = "CV_GianFelixRamadan.pdf";
+              downloadLink.href = "/CV_ID_GIANFELIXRAMADAN_2024.pdf";
+              downloadLink.download = "CV_ID_GIANFELIXRAMADAN_2024.pdf";
               downloadLink.click();
             }}
           >

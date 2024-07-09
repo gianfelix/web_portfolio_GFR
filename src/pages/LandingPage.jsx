@@ -16,25 +16,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchUserLocation = async () => {
       try {
-        // Get user's geolocation using browser's Geolocation API
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-
-            // Check if user is in Jogja (coordinates are approximate)
-            // const isUserInJogja = latitude > -7.733838 && latitude < -7.74 &&
-            //   longitude > 110.383752 && longitude < 110.393752;
-              // -7.733838, 110.383752
-              const isUserInJogja = latitude > -7.80 && latitude < -7.70 &&
-              longitude > 110.30 && longitude < 110.50;
-            setUserLocation(isUserInJogja ? "Jogja" : "Other");
-          },
-          (error) => {
-            console.error("Error getting geolocation:", error);
-            setUserLocation("Other");
-          }
-        );
+        
         console.log("cek lokasi:" ,navigator.geolocation.getCurrentPosition, userLocation);
       } catch (error) {
         console.error("Geolocation is not supported by this browser.");
