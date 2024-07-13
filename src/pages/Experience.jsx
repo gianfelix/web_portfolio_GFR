@@ -9,6 +9,7 @@ import {
   useColorMode,
   UnorderedList,
   ListItem,
+  List,
 } from "@chakra-ui/react";
 
 const Experience = () => {
@@ -40,6 +41,49 @@ const Experience = () => {
           </Heading>
 
           <Stack spacing={8}>
+            {/* Experience Entry 0 */}
+            <Box
+              p={7}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="md"
+              boxShadow={"md"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
+                2024
+              </Text>
+              <Heading size="lg" mb={2}>
+                Freelance GIS, Drone, and Developer, SinauGIS Consultant
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Provide hands-on training on the use of multi-rotor drones for
+                  mapping and processing aerial drone data using Agisoft
+                  Metashape
+                </ListItem>
+                <ListItem>
+                  Provide training in the use of Geographic Information Systems
+                  (GIS) at basic to advanced levels
+                </ListItem>
+                <ListItem>
+                  Developing a disaster risk management system application,
+                  namely the "SIPANDU MERAPI" application based on android
+                  technology
+                </ListItem>
+                <ListItem>
+                  Developing "SINTARA" application, Central Halmahera Regency
+                  Infrastructure and Spatial Information System based on digital
+                  map
+                </ListItem>
+                <ListItem>
+                Conducting disaster risk assessment (KRB) and spatial data
+                  processing for the production of KRB maps in Kudus Regency
+                </ListItem>
+              </UnorderedList>
+            </Box>
             {/* Experience Entry 0 */}
             <Box
               p={7}

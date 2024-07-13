@@ -79,6 +79,56 @@ const ExpLanding = () => {
                 fontWeight={"bold"}
                 color={isDarkmode ? "gray.200" : "gray.600"}
               >
+                2024
+              </Text>
+              <Heading size="lg" mb={2}>
+                Freelance GIS, Drone, and Developer, SinauGIS Consultant
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Provide hands-on training on the use of multi-rotor drones for
+                  mapping and processing aerial drone data using Agisoft
+                  Metashape
+                </ListItem>
+                <ListItem>
+                  Provide training in the use of Geographic Information Systems
+                  (GIS) at basic to advanced levels
+                </ListItem>
+                <ListItem>
+                  Developing a disaster risk management system application,
+                  namely the "SIPANDU MERAPI" application based on android
+                  technology
+                </ListItem>
+                <ListItem>
+                  Developing "SINTARA" application, Central Halmahera Regency
+                  Infrastructure and Spatial Information System based on digital
+                  map
+                </ListItem>
+                <ListItem>
+                  Conducting disaster risk assessment (KRB) and spatial data
+                  processing for the production of KRB maps in Kudus Regency
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            {/* Experience Entry 0 */}
+            <Box
+              p={6}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="xl"
+              boxShadow={"md"}
+              border={"1px"}
+              borderColor={isDarkmode ? "white" : "blue.300"}
+              _hover={{
+                transform: "translateY(-5px)",
+                bg: isDarkmode ? "blue.800" : "blue.200",
+              }}
+              transition={"all 0.3s ease"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
                 2023
               </Text>
               <Heading size="lg" mb={2}>
@@ -177,42 +227,7 @@ const ExpLanding = () => {
                 </ListItem>
               </UnorderedList>
             </Box>
-            {/* Experience Entry 3 */}
-            <Box
-              p={6}
-              bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="xl"
-              boxShadow={"md"}
-              border={"1px"}
-              borderColor={isDarkmode ? "white" : "blue.300"}
-              _hover={{
-                transform: "translateY(-5px)",
-                bg: isDarkmode ? "blue.800" : "blue.200",
-              }}
-              transition={"all 0.3s ease"}
-            >
-              <Text
-                fontSize="xl"
-                fontWeight={"bold"}
-                color={isDarkmode ? "gray.200" : "gray.600"}
-              >
-                2021
-              </Text>
-              <Heading size={{ base: "md", md: "lg" }} mb={2}>
-                GIS Operator, SinauGIS Consultant
-              </Heading>
-              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md" }}>
-                <ListItem>
-                  Responsible for extracting geographical features from remote
-                  sensing imagery for the preparation of the Banjarasri Village
-                  Land Use Plan Map in Kulonprogo Regency, DI Yogyakarta.
-                </ListItem>
-                <ListItem>
-                  Implemented participatory mapping for the government of
-                  Banjarasri Village during the Land Use Plan Map preparation.
-                </ListItem>
-              </UnorderedList>
-            </Box>
+            
           </Stack>
           <Button
             mt={5}

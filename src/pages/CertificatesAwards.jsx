@@ -64,6 +64,29 @@ const CertificatesAwards = () => {
           >
             <CardHeader>
               <Heading size={{ base: "md", md: "lg" }}>
+                Certificate of Completion - Bootcamp Web Development
+              </Heading>
+            </CardHeader>
+            <CardBody fontSize={{ base: "sm", md: "md" }}>
+              <Text>
+                Organized By Purwadhika Digital Technology School
+              </Text>
+              <Text>Date: May 2023</Text>
+              <Text mt={2} align={"justify"}>
+              The Fullstack Web Development Bootcamp organized by Purwadhika Technology School was held for 3 months. During the bootcamp the material obtained is: programming basics, Javascript language, HTML, SQL, CSS, React.js framework, UI chakra styling, frontend, backend, REST API, fullstack web, exercises, mini projects, and others. Of course, the experience during the bootcamp helped me to increase my programming language skills for web development
+              </Text>
+            </CardBody>
+          </Card>
+          <Card
+            bg={isDarkMode ? "blue.900" : "blue.100"}
+            _hover={{
+              borderColor: isDarkMode ? "white" : "black",
+              borderWidth: 1,
+              bg: isDarkMode ? "blue.800" : "blue.200",
+            }}
+          >
+            <CardHeader>
+              <Heading size={{ base: "md", md: "lg" }}>
                 Remote Pilot Certificate
               </Heading>
             </CardHeader>
@@ -71,7 +94,7 @@ const CertificatesAwards = () => {
               <Text>
                 Organized By Indonesian Drone Pilots Association (APDI)
               </Text>
-              <Text>Date: June 2022 - June 2024</Text>
+              <Text>Date: June 2022</Text>
               <Text mt={2} align={"justify"}>
                 The Remote Pilot Certificate held by Asosiasi Pilot Drone
                 Indonesia (APDI) is an official recognition of competence and
