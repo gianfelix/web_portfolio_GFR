@@ -53,6 +53,57 @@ const Experience = () => {
                 fontWeight={"bold"}
                 color={isDarkmode ? "gray.200" : "gray.600"}
               >
+                2025
+              </Text>
+              <Heading size="lg" mb={2}>
+                Geodetic Officer, PT Kilang Pertamina Internasional
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Data collection using digital mapping, photogrammetry, and
+                  remote sensing.
+                </ListItem>
+                <ListItem>
+                  Mapping and monitoring of company land and building assets.
+                </ListItem>
+                <ListItem>
+                  Evaluate and process the results of company land and building
+                  asset mapping.
+                </ListItem>
+                <ListItem>
+                  Monitor inventory and data updating activities for assets and
+                  buildings.
+                </ListItem>
+                <ListItem>
+                  Conduct physical checks of land and building asset data.
+                </ListItem>
+                <ListItem>
+                  Monitor the procurement of buffer zone land.
+                </ListItem>
+                <ListItem>
+                  Assist in developing and managing Company Archive Data.
+                </ListItem>
+                <ListItem>
+                  Assisting with and monitoring the matching and research of
+                  company archive data.
+                </ListItem>
+                <ListItem>
+                  Assisting with the inventory of company archive data.
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            {/* Experience Entry 0 */}
+            <Box
+              p={7}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="md"
+              boxShadow={"md"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
                 2024
               </Text>
               <Heading size="lg" mb={2}>
@@ -79,7 +130,7 @@ const Experience = () => {
                   map
                 </ListItem>
                 <ListItem>
-                Conducting disaster risk assessment (KRB) and spatial data
+                  Conducting disaster risk assessment (KRB) and spatial data
                   processing for the production of KRB maps in Kudus Regency
                 </ListItem>
               </UnorderedList>

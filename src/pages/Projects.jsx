@@ -34,6 +34,15 @@ export const Projects = () => {
 
   const projectsData = [
     {
+      title: "Analisis Sistem Informasi Asset Potensial (ASIAP) Website",
+      imageSrc: "asiap_kpi.png",
+      description:
+        "The Analisis Sistem Informasi Asset Potensial (ASIAP) Website is a web-based application developed to support the management, mapping, and analysis of potential company assets. It provides an interactive dashboard, data visualization, and digital maps to help users monitor, evaluate, and make strategic decisions regarding asset management.",
+      demoLink: "https://asset-management-kpi.netlify.app/",
+      githubLink:
+        "https://github.com/gianfelix/asiap-KPI-project",
+    },
+    {
       title: "WebGIS - SINTARA HALTENG KAB",
       imageSrc: "sintara_LP.png",
       description:

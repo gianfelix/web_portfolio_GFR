@@ -21,6 +21,8 @@ import GEE_app from "./components/WebGIS/GEE_app";
 import BarcodeGenerator from "./components/Barcode_Try/BarcodeGenerator";
 import MyBarcodeScanner from "./components/Barcode_Try/MyBarcodeScanner";
 import WebGIS4 from "./components/WebGIS/WebGIS4";
+import WebGIS5 from "./components/WebGIS/WebGIS5";
+
 
 const theme = extendTheme({
   // Atur tema Chakra UI sesuai preferensi Anda
@@ -71,6 +73,7 @@ function App() {
           <Route path="/barcode" element={<BarcodeGenerator />} />
           <Route path="/scan" element={<MyBarcodeScanner/>} />
           <Route path="/webgis-5" element={<WebGIS4 />} />
+          <Route path="/webgis-6" element={<WebGIS5 />} />
         </Routes>
       </ChakraProvider>
     </>
