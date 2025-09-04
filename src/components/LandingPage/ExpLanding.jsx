@@ -79,6 +79,65 @@ const ExpLanding = () => {
                 fontWeight={"bold"}
                 color={isDarkmode ? "gray.200" : "gray.600"}
               >
+                2025 - Now
+              </Text>
+              <Heading size="lg" mb={2}>
+                Geodetic Officer, PT Kilang Pertamina Internasional
+              </Heading>
+              <UnorderedList pl={2}>
+                <ListItem>
+                  Data collection using digital mapping, photogrammetry, and
+                  remote sensing.
+                </ListItem>
+                <ListItem>
+                  Mapping and monitoring of company land and building assets.
+                </ListItem>
+                <ListItem>
+                  Evaluate and process the results of company land and building
+                  asset mapping.
+                </ListItem>
+                <ListItem>
+                  Monitor inventory and data updating activities for assets and
+                  buildings.
+                </ListItem>
+                <ListItem>
+                  Conduct physical checks of land and building asset data.
+                </ListItem>
+                <ListItem>
+                  Monitor the procurement of buffer zone land.
+                </ListItem>
+                <ListItem>
+                  Assist in developing and managing Company Archive Data.
+                </ListItem>
+                <ListItem>
+                  Assisting with and monitoring the matching and research of
+                  company archive data.
+                </ListItem>
+                <ListItem>
+                  Assisting with the inventory of company archive data.
+                </ListItem>
+              </UnorderedList>
+            </Box>
+
+            {/* Experience Entry 0 */}
+            <Box
+              p={6}
+              bg={isDarkmode ? "blue.700" : "blue.100"}
+              borderRadius="xl"
+              boxShadow={"md"}
+              border={"1px"}
+              borderColor={isDarkmode ? "white" : "blue.300"}
+              _hover={{
+                transform: "translateY(-5px)",
+                bg: isDarkmode ? "blue.800" : "blue.200",
+              }}
+              transition={"all 0.3s ease"}
+            >
+              <Text
+                fontSize="xl"
+                fontWeight={"bold"}
+                color={isDarkmode ? "gray.200" : "gray.600"}
+              >
                 2024
               </Text>
               <Heading size="lg" mb={2}>
@@ -190,44 +249,6 @@ const ExpLanding = () => {
                 </ListItem>
               </UnorderedList>
             </Box>
-            {/* Experience Entry 2 */}
-            <Box
-              p={6}
-              bg={isDarkmode ? "blue.700" : "blue.100"}
-              borderRadius="xl"
-              boxShadow={"md"}
-              border={"1px"}
-              borderColor={isDarkmode ? "white" : "blue.300"}
-              _hover={{
-                transform: "translateY(-5px)",
-                bg: isDarkmode ? "blue.800" : "blue.200",
-              }}
-              transition={"all 0.3s ease"}
-            >
-              <Text
-                fontSize="xl"
-                fontWeight={"bold"}
-                color={isDarkmode ? "gray.200" : "gray.600"}
-              >
-                2021
-              </Text>
-              <Heading size={{ base: "md", md: "lg" }} mb={2}>
-                Drone Operator, Enumerator of the Faculty of Forestry,
-                Universitas Gadjah Mada
-              </Heading>
-              <UnorderedList pl={2} fontSize={{ base: "sm", md: "md" }}>
-                <ListItem>
-                  Implementing Monitoring of Mangrove Rehabilitation Areas in
-                  the Riau Archipelago through Aerial Mapping Using a Multirotor
-                  Drone.
-                </ListItem>
-                <ListItem>
-                  Geotagging photo data processing survey results using ArcGIS
-                  software.
-                </ListItem>
-              </UnorderedList>
-            </Box>
-            
           </Stack>
           <Button
             mt={5}

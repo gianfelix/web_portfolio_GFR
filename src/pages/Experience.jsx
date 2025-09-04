@@ -53,7 +53,7 @@ const Experience = () => {
                 fontWeight={"bold"}
                 color={isDarkmode ? "gray.200" : "gray.600"}
               >
-                2025
+                2025 - Now
               </Text>
               <Heading size="lg" mb={2}>
                 Geodetic Officer, PT Kilang Pertamina Internasional
